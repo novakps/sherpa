@@ -3,4 +3,5 @@
 
   roles:
     - packager
-    - text_editors
+    - emacs
+    - vim
