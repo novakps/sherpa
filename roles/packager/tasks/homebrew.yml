@@ -8,4 +8,8 @@
 - name: Update Homebrew
   homebrew: update_homebrew=yes
 
+- name: install with homebrew
+  sudo: no
+  action: "{{ packager }} name={{ item }} state=present"
+  with_items: items
       

@@ -2,6 +2,5 @@
 - hosts: all
 
   roles:
-    - packager
-    - emacs
-    - vim
+    - {role: packager, items: ['emacs', 'vim']}
+    
