@@ -1,0 +1,3 @@
+---
+packager_sudo: yes
+packager: "{{ ansible_pkg_mgr }}"

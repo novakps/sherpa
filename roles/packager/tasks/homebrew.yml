@@ -1,0 +1,11 @@
+---
+
+- name: ensure Homebrew is installed
+  script: install.sh  
+  args: 
+    creates: /usr/local/bin/brew 
+
+- name: Update Homebrew
+  homebrew: update_homebrew=yes
+
+      

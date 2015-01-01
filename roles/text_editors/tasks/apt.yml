@@ -1,0 +1,6 @@
+---
+
+- name: install with apt
+  sudo: yes
+  action: "{{ packager }} name={{ item }} state=present"
+  with_items: items
