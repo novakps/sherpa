@@ -1,4 +1,4 @@
-g---
+---
 - name: install with homebrew
   sudo: no
   action: "{{ packager }} name={{ item }} state=present"
