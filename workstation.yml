@@ -2,5 +2,13 @@
 - hosts: all
 
   roles:
-    - {role: packager, items: ['emacs', 'vim']}
+    - emacs
+#    - vim
+#    - ant
+#    - gawk
+#    - p7zip
+#    - tmux
+#    - wget
+#    - zsh
+
     
