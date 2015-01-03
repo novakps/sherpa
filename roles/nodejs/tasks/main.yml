@@ -1,0 +1,15 @@
+---
+
+- apt_repository:
+  sudo: yes
+  args:
+    state: present
+    repo: "ppa:chris-lea/node.js"
+  when: ansible_pkg_mgr == "apt"
+
+- include: ../../pkg_mgr_apt/tasks/install_package.yml
+  when: ansible_pkg_mgr == "apt"
+
+- include: ../../pkg_mgr_homebrew/tasks/install_package.yml
+  when: ansible_os_family == "Darwin"
+  

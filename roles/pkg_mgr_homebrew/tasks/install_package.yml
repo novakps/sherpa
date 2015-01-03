@@ -1,5 +1,8 @@
 ---
+- debug: var=package_name
+
 - name: install with homebrew
   sudo: no
   homebrew:  name={{ package_name }} state=present
+
 

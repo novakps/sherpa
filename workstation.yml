@@ -2,14 +2,45 @@
 - hosts: all
 
   roles:
+
+# text editors
     - emacs
     - vim
-#    - ant
-#    - gawk
-#    - p7zip
-#    - tmux
-#    - wget
-#    - zsh
+
+# development tools
+    - ant
+    - gawk
+    - p7zip
+    - tmux
+    - wget
+    - zsh
+#    - virtualbox
+
+# command line
+    - java7
+    - nodejs
+
+# databases
+#    - postgresql
+
+# browsers
     - google-chrome
+    - firefox
+
+# applications
+#    - evernote
+#    - googledrive
+#    - hipchat
+#    - sourcetree
+#    - calibre
+#    - cord
+#    - gimp
+#    - reggy
+#    - shiftit
+#    - skitch
+#    - skype
+#    - graphviz
+#    - vlc
+
 
     
