@@ -1,9 +1,25 @@
 ---
 
-- name: ensure Homebrew is installed
+- name: assert Homebrew installed
+  stat: path=/usr/local/bin/brew
+  register: homebrew_installed
+
+- name: Install Homebrew
   script: install.sh  
-  args: 
-    creates: /usr/local/bin/brew 
+  when: homebrew_installed == false
 
 - name: Update Homebrew
   homebrew: update_homebrew=yes
+
+- name: assert Homebrew cask installed
+  stat: path=/usr/local/bin/brew-cask.rb
+  register: cask_installed
+
+- name: tap the cask repository
+  homebrew_tap: tap=caskroom/cask state=present
+  when: cask_installed.stat.exists == false
+
+- name: install brew-cask
+  homebrew: name=brew-cask state=latest update_homebrew=yes
+  when: cask_installed.stat.exists == false
+

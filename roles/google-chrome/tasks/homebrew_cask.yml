@@ -1,0 +1,4 @@
+---
+- name: Install with Homebrew cask
+  homebrew_cask: name={{  package_name }} state=present
+  sudo: no

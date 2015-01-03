@@ -4,8 +4,8 @@
    tasks:
      - group_by: key=os_{{ ansible_os_family }}
 
-
  - hosts: all
+   gather_facts: false
    tasks:
      - group_by: key=pkg_mgr_{{ ansible_pkg_mgr }}
 
@@ -20,6 +20,7 @@
      - pkg_mgr_apt
 
  - hosts: all
+   gather_facts: false
  - include: workstation.yml
  
 

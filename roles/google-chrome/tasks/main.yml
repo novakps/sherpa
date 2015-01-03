@@ -1,0 +1,8 @@
+---
+
+- include: apt.yml package_name=chromium
+  when: ansible_pkg_mgr == "apt" 
+
+- include: homebrew_cask.yml package_name=google-chrome
+  when: ansible_os_family == "Darwin"
+
