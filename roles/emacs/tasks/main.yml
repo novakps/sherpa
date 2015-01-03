@@ -1,9 +1,8 @@
 ---
 
-- include: apt.yml
+- include: ../../pkg_mgr_apt/tasks/install_package.yml
   when: ansible_pkg_mgr == "apt"
 
-- include: homebrew.yml
+- include: ../../pkg_mgr_homebrew/tasks/install_package.yml
   when: ansible_os_family == "Darwin"
   
-
