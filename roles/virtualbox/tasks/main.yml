@@ -1,0 +1,16 @@
+---
+
+- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=virtualbox-ose-dkms
+  when: ansible_pkg_mgr == "apt" 
+
+- name: add repo key
+  sudo: yes
+  apt_key: state=present
+           url=http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc
+  when: ansible_pkg_mgr == "apt" 
+
+- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=virtualbox-ose
+  when: ansible_pkg_mgr == "apt" 
+
+- include: ../../pkg_mgr_homebrew/tasks/install_cask_package.yml
+  when: ansible_os_family == "Darwin"

@@ -14,14 +14,14 @@
     - tmux
     - wget
     - zsh
-#    - virtualbox
+    - virtualbox
 
 # command line
     - java7
     - nodejs
 
 # databases
-#    - postgresql
+    - postgresql
 
 # browsers
     - google-chrome
