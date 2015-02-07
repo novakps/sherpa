@@ -7,6 +7,11 @@
     - emacs
     - vim
 
+# languages
+    - java7
+    - nodejs
+    - python
+
 # development tools
     - ant
     - gawk
@@ -15,10 +20,7 @@
     - wget
     - zsh
     - virtualbox
-
-# command line
-    - java7
-    - nodejs
+    - virtualenv
 
 # databases
     - postgresql
@@ -26,6 +28,9 @@
 # browsers
     - google-chrome
     - firefox
+
+# livedesign
+    - python-psycopg2
 
 # applications
 #    - evernote

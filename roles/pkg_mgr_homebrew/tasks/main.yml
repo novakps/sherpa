@@ -6,7 +6,7 @@
 
 - name: Install Homebrew
   script: install.sh  
-  when: homebrew_installed == false
+  when: homebrew_installed.stat.exists == false
 
 - name: Update Homebrew
   homebrew: update_homebrew=yes
