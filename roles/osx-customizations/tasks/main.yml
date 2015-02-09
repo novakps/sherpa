@@ -1,0 +1,7 @@
+---
+
+- name: "OS X Preferences"
+  command: defaults write {{item.domain}} {{item.key}} {{item.value}}
+  with_items: osx.prefs
+  when: ansible_os_family == "Darwin"
+
