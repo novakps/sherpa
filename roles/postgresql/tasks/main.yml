@@ -1,16 +1,17 @@
 ---
 
-- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=postgresql
-  when: ansible_pkg_mgr == "apt"
+ - include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=postgresql
+   when: ansible_pkg_mgr == "apt"
 
-- include: ../../pkg_mgr_homebrew/tasks/install_package.yml package_name=postgresql
-  when: ansible_os_family == "Darwin"
+ - include: ../../pkg_mgr_homebrew/tasks/install_package.yml package_name=postgresql
+   when: ansible_os_family == "Darwin"
   
+# figure out how to make this version agnostic
  - name: Copy valid pg_hba.conf
-   template: src=pg_hba.conf.j2 dest=/etc/postgresql/9.3/main/pg_hba.conf
+   template: src=pg_hba.conf.j2 dest=/etc/postgresql/9.4.1/main/pg_hba.conf
 
  - name: postgresql.conf
-   template: src=postgresql.conf.j2 dest=/etc/postgresql/9.3/main/postgresql.conf
+   template: src=postgresql.conf.j2 dest=/etc/postgresql/9.4.1/main/postgresql.conf
 
  - name: Restart PostgreSQL
    command: service postgresql restart
