@@ -3,9 +3,12 @@
 
   roles:
 
+    - osx-customizations
+
 # text editors
     - emacs
     - vim
+#   - sublime-text3
 
 # languages
     - java7
@@ -13,14 +16,17 @@
     - python
 
 # development tools
+    - git
     - ant
     - gawk
     - p7zip
     - tmux
     - wget
     - zsh
+#    - zsh-completions
     - virtualbox
-    - virtualenv
+#   - vagrant
+#    - virtualenv 
 
 # databases
     - postgresql
@@ -46,6 +52,8 @@
 #    - skype
 #    - graphviz
 #    - vlc
+#    - alfred
+#    - the-unarchiver
 
 
     
