@@ -1,8 +1,21 @@
 ---
+- name: Clone Emacs config
+  git: >
+    repo=git://github.com/bbatsov/prelude.git
+    accept_hostkey=yes
+    dest=~/.emacs.d
+    force=no
+
+- name: prelude modules
+  copy: src=conf/ dest=~/.emacs.d backup=yes
 
 - include: ../../pkg_mgr_apt/tasks/install_package.yml
   when: ansible_pkg_mgr == "apt"
 
 - include: ../../pkg_mgr_homebrew/tasks/install_package.yml
+  when: ansible_os_family == "Darwin"
+
+- name: link
+  file: src=/usr/local/Cellar/emacs/24.4/Emacs.app dest=/Applications/Emacs.app state=link
   when: ansible_os_family == "Darwin"
   
