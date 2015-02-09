@@ -1,7 +1,9 @@
 ---
 
 - include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=virtualbox-ose-dkms
-  when: ansible_pkg_mgr == "apt" 
+  when: ansible_pkg_mgr == "apt" and ansible_distribution_release == "precise"
+
+# TODO need install for trusty 64
 
 - name: add repo key
   sudo: yes
