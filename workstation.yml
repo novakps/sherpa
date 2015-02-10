@@ -8,7 +8,7 @@
 # text editors
     - emacs
     - vim
-#   - sublime-text3
+    - sublime-text
 
 # languages
     - java7
@@ -23,9 +23,9 @@
     - tmux
     - wget
     - zsh
-#    - zsh-completions
+    - zsh-completions
     - virtualbox
-#   - vagrant
+    - vagrant
 #    - virtualenv 
 
 # databases
@@ -39,21 +39,21 @@
     - python-psycopg2
 
 # applications
-#    - evernote
-#    - googledrive
-#    - hipchat
-#    - sourcetree
-#    - calibre
-#    - cord
-#    - gimp
-#    - reggy
-#    - shiftit
-#    - skitch
-#    - skype
-#    - graphviz
-#    - vlc
-#    - alfred
-#    - the-unarchiver
+    - evernote
+    - google-drive
+    - hipchat
+    - sourcetree
+    - calibre
+    - cord
+    - gimp
+    - reggy
+    - shiftit
+    - skitch
+    - skype
+    - graphviz
+    - vlc
+    - alfred
+    - the-unarchiver
 
 
     

@@ -1,0 +1,16 @@
+---
+
+- name: Add ppa
+  apt_repository:
+  sudo: yes
+  args: 
+    state: present
+    repo: "ppa:webupd8team/sublime-text-2"
+    update_cache: yes
+  when: ansible_distribution in [ 'Ubuntu' ]
+
+- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=sublime-text
+  when: ansible_pkg_mgr == "apt" 
+
+- include: ../../pkg_mgr_homebrew/tasks/install_cask_package.yml package_name=sublime-text
+  when: ansible_os_family == "Darwin"

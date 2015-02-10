@@ -16,9 +16,6 @@ osx:
     - key: com.apple.keyboard.fnState
       value: -bool true
       domain: NSGlobalDomain
-    - key: DeviceEnabled
-      value: -bool true
-      domain: /Library/Preferences/com.apple.driver.AppleIRController
     - key: KeyRepeat
       value: -int 0
       domain: NSGlobalDomain

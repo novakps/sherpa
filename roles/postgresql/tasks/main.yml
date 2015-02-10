@@ -6,15 +6,14 @@
  - include: ../../pkg_mgr_homebrew/tasks/install_package.yml package_name=postgresql
    when: ansible_os_family == "Darwin"
   
-# figure out how to make this version agnostic
- - name: Copy valid pg_hba.conf
-   template: src=pg_hba.conf.j2 dest=/etc/postgresql/9.4.1/main/pg_hba.conf
+# - name: Copy valid pg_hba.conf
+#   template: src=pg_hba.conf.j2 dest=/etc/postgresql/9.3/main/pg_hba.conf
 
- - name: postgresql.conf
-   template: src=postgresql.conf.j2 dest=/etc/postgresql/9.4.1/main/postgresql.conf
+# - name: postgresql.conf
+#   template: src=postgresql.conf.j2 dest=/etc/postgresql/9.3/main/postgresql.conf
 
- - name: Restart PostgreSQL
-   command: service postgresql restart
+# - name: Restart PostgreSQL
+#   command: service postgresql restart
 
  - name: create the postgresql user for application
    postgresql_user: name=postgres
