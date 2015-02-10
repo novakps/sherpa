@@ -9,10 +9,10 @@
 - name: prelude modules
   copy: src=conf/ dest=~/.emacs.d backup=yes
 
-- include: ../../pkg_mgr_apt/tasks/install_package.yml
+- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=emacs
   when: ansible_pkg_mgr == "apt"
 
-- include: ../../pkg_mgr_homebrew/tasks/install_package.yml
+- include: ../../pkg_mgr_homebrew/tasks/install_package.yml package_name=emacs insstall_options=cocoa
   when: ansible_os_family == "Darwin"
 
 - name: link
