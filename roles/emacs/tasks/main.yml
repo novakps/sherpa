@@ -12,7 +12,7 @@
 - include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=emacs
   when: ansible_pkg_mgr == "apt"
 
-- include: ../../pkg_mgr_homebrew/tasks/install_package.yml package_name=emacs insstall_options=cocoa
+- include: ../../pkg_mgr_homebrew/tasks/install_package.yml package_name=emacs install_options=cocoa
   when: ansible_os_family == "Darwin"
 
 - name: link
