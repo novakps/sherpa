@@ -2,6 +2,6 @@
 - debug: var=package_name
 
 - name: Install with apt
-  apt: name={{ package_name }} state=present
+  apt: name=item state=present
   sudo: yes
-
+  with_items: '{{ package_names }}'

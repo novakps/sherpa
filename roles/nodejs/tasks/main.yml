@@ -7,9 +7,9 @@
     repo: "ppa:chris-lea/node.js"
   when: ansible_pkg_mgr == "apt"
 
-- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=nodejs
+- include: ../../pkg_mgr_apt/tasks/install_package.yml package_names=['nodejs']
   when: ansible_pkg_mgr == "apt"
 
-- include: ../../pkg_mgr_homebrew/tasks/install_package.yml package_name=nodejs
+- include: ../../pkg_mgr_homebrew/tasks/install_package.yml package_names=['nodejs']
   when: ansible_os_family == "Darwin"
   

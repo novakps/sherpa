@@ -1,10 +1,10 @@
 ---
 
 
-- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=git
+- include: ../../pkg_mgr_apt/tasks/install_package.yml package_names=['git']
   when: ansible_pkg_mgr == "apt"
 
-- include: ../../pkg_mgr_homebrew/tasks/install_package.yml package_name=git
+- include: ../../pkg_mgr_homebrew/tasks/install_package.yml package_names=['git']
   when: ansible_os_family == "Darwin"
 
 

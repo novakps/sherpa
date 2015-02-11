@@ -1,4 +1,4 @@
 --- 
 
-- include: ../../pkg_mgr_homebrew/tasks/install_cask_package.yml package_name=sourcetree
+- include: ../../pkg_mgr_homebrew/tasks/install_cask_package.yml package_names=['sourcetree']
   when: ansible_os_family == "Darwin"
