@@ -1,4 +1,4 @@
 ---
 
-- include: ../../pkg_mgr_apt/tasks/install_package.yml package_names=['skype']
+- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=skype
   when: ansible_pkg_mgr == "apt" 

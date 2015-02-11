@@ -1,4 +1,4 @@
 ---
 
-- include: ../../pkg_mgr_apt/tasks/install_package.yml package_names=['graphviz']
+- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=graphviz
   when: ansible_pkg_mgr == "apt" 

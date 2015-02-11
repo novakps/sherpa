@@ -1,4 +1,4 @@
 ---
 
-- include: ../../pkg_mgr_apt/tasks/install_package.yml package_names=['alfred']
+- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=alfred
   when: ansible_pkg_mgr == "apt" 

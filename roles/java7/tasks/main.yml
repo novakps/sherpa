@@ -14,12 +14,12 @@
   sudo: yes
   when: ansible_distribution in [ 'Ubuntu' ]
 
-- include: ../../pkg_mgr_apt/tasks/install_package.yml package_names=['oracle-java7-installer']
+- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=oracle-java7-installer
   when: ansible_pkg_mgr == "apt" 
 
-- include: ../../pkg_mgr_apt/tasks/install_package.yml package_names=['oracle-java7-set-default']
+- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=oracle-java7-set-default
   when: ansible_pkg_mgr == "apt" 
 
-- include: ../../pkg_mgr_homebrew/tasks/install_cask_package.yml package_names=['java7']
+- include: ../../pkg_mgr_homebrew/tasks/install_cask_package.yml package_name=java7
   when: ansible_os_family == "Darwin"
 
