@@ -3,8 +3,6 @@
 
   roles:
 
-    - osx-customizations
-
 # text editors
     - emacs
     - vim
@@ -36,7 +34,7 @@
     - firefox
 
 # livedesign
-    - python-psycopg2
+#    - python-psycopg2
 
 # applications
     - evernote
@@ -44,16 +42,14 @@
     - hipchat
     - sourcetree
     - calibre
-    - cord
     - gimp
     - reggy
-    - shiftit
     - skitch
     - skype
     - graphviz
     - vlc
-    - alfred
     - the-unarchiver
+ 
 
 
     

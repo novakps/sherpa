@@ -12,12 +12,17 @@
  - hosts: os_Darwin
    gather_facts: false
    roles:
+     - osx-customizations
      - pkg_mgr_homebrew
+     - alfred
+     - cord
+     - shiftit
 
  - hosts: pkg_mgr_apt
    gather_facts: false
    roles:
      - pkg_mgr_apt
+     - i3
 
  - hosts: all
    gather_facts: false
