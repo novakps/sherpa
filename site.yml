@@ -23,6 +23,7 @@
    roles:
      - pkg_mgr_apt
      - i3
+     - rdesktop
 
  - hosts: all
    gather_facts: false

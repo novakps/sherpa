@@ -1,13 +1,21 @@
 ---
 
+
+- name: add VirtualBox repo signing key
+  apt_key: state=present
+           url=http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc
+  sudo: yes
+  when: ansible_pkg_mgr == "apt"
+
 - include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=virtualbox-ose-dkms
   when: ansible_pkg_mgr == "apt" and ansible_distribution_release == "precise"
 
 - include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=virtualbox-ose
   when: ansible_pkg_mgr == "apt" and ansible_distribution_release == "precise"
   
-  name: add virtualbox repo
+- name: add virtualbox repo
   apt_repository: repo='deb http://download.virtualbox.org/virtualbox/debian trusty contrib' state=present
+  sudo: yes
   when: ansible_pkg_mgr == 'apt' and ansible_distribution_release == 'trusty'
 
 - include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=dkms
