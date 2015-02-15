@@ -6,6 +6,14 @@
 - include: ../../pkg_mgr_homebrew/tasks/install_package.yml package_name=zsh
   when: ansible_os_family == "Darwin"
 
-- name: make zsh default
-  shell:  chsh -s /bin/zsh 
+- name: make zsh default shell
+  shell: chsh -s /bin/zsh 
+
+- name: Check oh-my-zsh is installed
+  stat: path=~/.oh-my-zsh
+  register: oh_my_zsh_installed
+
+- name: Install oh-my-zsh
+  shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+  when: oh_my_zsh_installed.stat.exists == false
   
