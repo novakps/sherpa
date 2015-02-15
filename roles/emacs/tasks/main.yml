@@ -1,5 +1,5 @@
 ---
-- name: Clone Emacs config
+- name: Clone prelude
   git: >
     repo=git://github.com/bbatsov/prelude.git
     accept_hostkey=yes
@@ -11,11 +11,16 @@
 
 - include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=emacs
   when: ansible_pkg_mgr == "apt"
+  notify: Install emacs packages
 
 - include: ../../pkg_mgr_homebrew/tasks/install_package.yml package_name=emacs install_options=cocoa
   when: ansible_os_family == "Darwin"
+  notify: Install emacs packages
 
 - name: link
   file: src=/usr/local/Cellar/emacs/24.4/Emacs.app dest=/Applications/Emacs.app state=link
   when: ansible_os_family == "Darwin"
   
+handlers:
+  - name: Install emacs packages
+    shell: emacs  --batch --eval t
