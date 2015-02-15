@@ -5,4 +5,7 @@
 
 - include: ../../pkg_mgr_homebrew/tasks/install_package.yml package_name=zsh
   when: ansible_os_family == "Darwin"
+
+- name: make zsh default
+  shell:  chsh -s /bin/zsh 
   
