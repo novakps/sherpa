@@ -11,3 +11,5 @@ else
     echo Ansible is not installed. Installing...
     pip install ansible
 fi
+
+ansible-playbook -K -i 'localhost,' -c local site.yml
