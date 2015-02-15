@@ -1,9 +1,7 @@
 ---
 
 
-- include: "../../pkg_mgr_apt/tasks/install_package.yml package_name={{ item }}"
-  with_items:
-    - vlc
+- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=vls
   when: ansible_pkg_mgr == "apt" 
 
 
