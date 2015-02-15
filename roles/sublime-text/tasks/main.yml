@@ -9,13 +9,8 @@
     update_cache: yes
   when: ansible_distribution in [ 'Ubuntu' ]
 
-- include: "../../pkg_mgr_apt/tasks/install_package.yml package_name={{ item }}"
-  with_items:
-    - sublime-text-installer
+- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=sublime-text3
   when: ansible_pkg_mgr == "apt" 
 
-- include: "../../pkg_mgr_homebrew/tasks/install_cask_package.yml package_name={{ item }}"
-  with_items: 
-    - sublime-text
-    - sublime-text3
+- include: ../../pkg_mgr_homebrew/tasks/install_cask_package.yml package_name=sublime-text3
   when: ansible_os_family == "Darwin"
