@@ -21,6 +21,5 @@
   file: src=/usr/local/Cellar/emacs/24.4/Emacs.app dest=/Applications/Emacs.app state=link
   when: ansible_os_family == "Darwin"
   
-handlers:
-  - name: Install emacs packages
-    shell: emacs  --batch --eval t
+- name: Install emacs packages
+  shell: emacs  --batch --eval t
