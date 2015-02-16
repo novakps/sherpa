@@ -6,3 +6,9 @@
   when: ansible_os_family == "Darwin"
   tags:
     - test
+
+- name: restart Finder and Dock
+  command: killAll {{ item }}
+  with_items:
+    - Finder
+    - Dock
