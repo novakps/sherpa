@@ -1,4 +1,10 @@
 #!/bin/sh
+
+if [[ ! -x /usr/bin/gcc ]]; then
+    echo install xcode cli tools
+    xcode-select --install
+fi
+
 if type pip; then
     echo Pip is already installed.
 else

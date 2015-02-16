@@ -28,6 +28,9 @@
  - hosts: all
    gather_facts: false
  - include: workstation.yml
+
+ - hosts: os_Darwin
+   command: /usr/local/bin/brew linkapps
  
 
  
