@@ -31,7 +31,3 @@
 
  - hosts: os_Darwin
    command: /usr/local/bin/brew linkapps
- 
-
- 
-
