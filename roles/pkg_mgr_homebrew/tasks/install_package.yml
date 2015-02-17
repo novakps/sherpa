@@ -4,6 +4,6 @@
 - name: install with homebrew
   sudo: no
   homebrew:  name={{ package_name }} state=latest install_options={{ install_options|default() }}
-  notify: linkapps
+
 
 
