@@ -5,70 +5,90 @@ osx:
   prefs:
     # Global Preferences
     - key: AppleKeyboardUIMode
-      value: -int 3
+      value: 3
+      type: int
       domain: NSGlobalDomain
     - key: PMPrintingExpandedStateForPrint
-      value: -bool true
+      value: true
+      type: bool
       domain: NSGlobalDomain
     - key: NSNavPanelExpandedStateForSaveMode
-      value: -bool true
+      value: true
+      type: bool
       domain: NSGlobalDomain
     - key: com.apple.keyboard.fnState
-      value: -bool true
+      value: true
+      type: bool
       domain: NSGlobalDomain
     - key: KeyRepeat
-      value: -int 0
+      value: 0
+      type: int
       domain: NSGlobalDomain
-    - key: InitialalKeyRepeat
-      value: -int 15
+    - key: InitialKeyRepeat
+      value: 15
+      type: int
       domain: NSGlobalDomain
     - key: KeyRepeat
-      value: -int 0
+      value: 0
+      type: int
       domain: NSGlobalDomain
     - key: com.apple.springing.enabled
-      value: -bool true
+      value: true
+      type: bool
       domain: NSGlobalDomain
 
     - key: LSQuarantine
-      value: -bool false
+      value: false
+      type: bool
       domain: com.apple.LaunchServices
   
     # Trackpad
     - key: Clicking
-      value: -bool false
+      value: false
+      type: bool
       domain: com.apple.AppleMultitouchTrackpad
     - key: TrackpadThreeFingerHorizSwipeGesture
-      value: -int 2
+      value: 2
+      type: int
       domain: com.apple.AppleMultitouchTrackpad
     - key: Clicking
-      value: -bool true
+      value: true
+      type: bool
       domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
     - key: com.apple.mouse.tapBehavior
-      value: -int 1
+      value: 1
+      type: int
       domain: NSGlobalDomain
 
     # Finder
     - key: EmptyTrashSecurely
-      value: -bool true
+      value: true
+      type: bool
       domain: com.apple.Finder
 
     # Dock
     - key: autohide
-      value: -bool true
+      value: true
+      type: bool
       domain: com.apple.dock
     - key: orientation
-      value: -string right
+      value: right
+      type: string
       domain: com.apple.dock
     - key: persistent-apps
-      value: -string ()
+      value: ()
+      type: string
       domain: com.apple.dock
     - key: tilesize
-      value: -int 36
+      value: 36
+      type: int
       domain: com.apple.dock
     - key: showMisionControlGestureEnabled
-      value: -bool false
+      value: false
+      type: bool
       domain: com.apple.dock
     - key: checked-for-launchpad
-      value: -bool true
+      value: true
+      type: bool
       domain: com.apple.dock
 
