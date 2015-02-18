@@ -8,6 +8,7 @@
 
 - name: Set zsh as default shell
   user: name={{ ansible_user_id }} shell=/bin/zsh
+  sudo: yes
 
 
 - name: Check oh-my-zsh is installed
