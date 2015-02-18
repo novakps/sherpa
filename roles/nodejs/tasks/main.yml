@@ -22,18 +22,21 @@
   apt_key: 
     url=https://deb.nodesource.com/gpgkey/nodesource.gpg.key 
     state=present
+  sudo: yes
   when: ansible_distribution in [ 'Ubuntu' ] and releasesupported |success
   
 - name: Add Nodesource Apt Sources List Deb
   apt_repository: 
     repo='deb https://deb.nodesource.com/node {{ ansible_distribution_release }} main' 
     state=present
+  sudo: yes
   when: ansible_distribution in [ 'Ubuntu' ] and releasesupported |success
 
 - name: Add Nodesource Apt Sources List Deb Src
   apt_repository: 
     repo='deb-src https://deb.nodesource.com/node {{ ansible_distribution_release }} main' 
     state=present
+  sudo: yes
   when: ansible_distribution in [ 'Ubuntu' ] and releasesupported |success
 
 - include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=nodejs
