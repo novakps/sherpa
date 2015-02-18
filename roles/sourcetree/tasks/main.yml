@@ -2,3 +2,4 @@
 
 - include: ../../pkg_mgr_homebrew/tasks/install_cask_package.yml package_name=sourcetree
   when: ansible_os_family == "Darwin"
+  notify: linkapps

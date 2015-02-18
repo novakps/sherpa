@@ -2,4 +2,4 @@
 
 - include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=rdesktop
   when: ansible_pkg_mgr == "apt"
-
+  notify: linkapps
