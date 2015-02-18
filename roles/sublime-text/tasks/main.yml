@@ -13,7 +13,7 @@
 - name: Add ppa for sublime-text2
   apt_repository:
   sudo: yes
-  args: ˆ
+  args: 
     state: present
     repo: "ppa:webupd8team/sublime-text-2"
     update_cache: yes
