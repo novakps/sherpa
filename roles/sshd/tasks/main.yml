@@ -1,0 +1,10 @@
+---
+- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=openssh-server
+  when: ansible_pkg_mgr == "apt"
+  notify:
+    - restart ssh
+  
+- name: ensure sshd is configured
+  template: src=etc/ssh/sshd_config.j2 dest=/etc/ssh/sshd_config backup=yes
+  notify:
+    - restart ssh
