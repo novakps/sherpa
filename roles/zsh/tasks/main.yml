@@ -22,5 +22,5 @@
   when: oh_my_zsh_installed.stat.exists == false
 
 - name: Replace zsh config
-  copy: src=~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+  copy: src=~/.oh-my-zsh/templates/zshrc.zsh-template dest=~/.zshrc backup=yes
   when: oh_my_zsh_installed.stat.exists == false
