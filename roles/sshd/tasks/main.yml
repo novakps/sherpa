@@ -6,5 +6,6 @@
   
 - name: ensure sshd is configured
   template: src=sshd_config.j2 dest=/etc/ssh/sshd_config backup=yes
+  sudo: yes
   notify:
     - restart ssh
