@@ -2,4 +2,4 @@
 
  - name: Example task only run for user novak
    include: novak.yml
-   when: ansible_user_id == novak
+   when: no

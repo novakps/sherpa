@@ -3,6 +3,9 @@
 
   roles:
 
+# system
+    - sshd
+
 # text editors
     - emacs
     - vim
