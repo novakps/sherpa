@@ -1,7 +1,6 @@
 ---
 
-
-- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=vls
+- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=vlc
   when: ansible_pkg_mgr == "apt" 
 
 
