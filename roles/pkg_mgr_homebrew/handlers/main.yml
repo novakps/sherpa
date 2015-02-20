@@ -1,3 +1,0 @@
----
- - name: linkapps
-   command: /usr/local/bin/brew linkapps
