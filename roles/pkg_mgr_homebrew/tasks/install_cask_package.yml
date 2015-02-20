@@ -3,5 +3,7 @@
 
 - name: Install with Homebrew cask
   homebrew_cask: name={{  package_name }} state=present
+  environment:
+    HOMEBREW_CASK_OPTS="/Applications"
   sudo: no
   
