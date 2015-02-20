@@ -1,0 +1,3 @@
+---
+
+ - npm: name=js-beautify global=yes state=present
