@@ -9,3 +9,4 @@
   sudo: yes
   notify:
     - restart ssh
+# TODO different path for osx
