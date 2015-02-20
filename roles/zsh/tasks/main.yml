@@ -9,6 +9,11 @@
 - name: Set zsh as default shell
   user: name={{ ansible_user_id }} shell=/bin/zsh
   sudo: yes
+  when: ansible_pkg_mgr == "apt"
+
+- name: Set zsh as default shell
+  shell: chsh -s /bin/zsh
+  when: ansible_os_family == "Darwin"
 
 - name: Check oh-my-zsh is installed
   stat: path=~/.oh-my-zsh
