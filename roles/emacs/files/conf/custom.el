@@ -1,3 +1,7 @@
+(prelude-require-package '(jss
+                           jsx-mode
+                           web-beautify))
+
 (require 'server)
 (unless (server-running-p)
   (server-start))
@@ -95,6 +99,3 @@ See URL `https://github.com/mdevils/node-jscs'."
                 (lambda ()
                   (interactive)
                   (ignore-errors (backward-char 5))))
-
-(prelude-require-package '(jss
-                           jsx-mode))
