@@ -14,9 +14,6 @@ sudo easy_install pip
 
 sudo pip install ansible
 
-git clone https://github.com/novakps/sherpa.git
-
-ansible-playbook -K -i 'localhost,' -c local —-ask-sudo-pass sherpa/site.yml 
 ```
 
 ## Ubuntu 14.04:
@@ -30,6 +27,10 @@ sudo apt-get install -y ansible
 
 sudo apt-get install git
 
+```
+## Both
+
+```
 git clone https://github.com/novakps/sherpa.git
 
 ansible-playbook -i 'localhost,' -c local —-ask-sudo-pass sherpa/site.yml
