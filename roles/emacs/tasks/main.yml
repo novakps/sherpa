@@ -1,7 +1,7 @@
 ---
 - name: Clone prelude
   git: >
-    repo=git://github.com/bbatsov/prelude.git
+    repo=https://github.com/bbatsov/prelude.git
     accept_hostkey=yes
     dest=~/.emacs.d
     force=no

@@ -21,7 +21,7 @@
 
 - name: Clone oh-my-zsh
   git: >
-    repo=git://github.com/robbyrussell/oh-my-zsh.git
+    repo=https://github.com/robbyrussell/oh-my-zsh.git
     accept_hostkey=yes
     dest=~/.oh-my-zsh
   when: oh_my_zsh_installed.stat.exists == false
