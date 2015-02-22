@@ -7,7 +7,10 @@
     force=no
 
 - name: prelude modules
-  copy: src=conf/ dest=~/.emacs.d backup=yes
+  copy: src=prelude-modules.el dest=~/.emacs.d backup=yes
+
+- name: prelude config
+  copy: src=init.el dest=~/.emacs.d/personal backup=yes
 
 - include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=emacs
   when: ansible_pkg_mgr == "apt"
@@ -21,7 +24,7 @@
 - name: link
   file: src=/usr/local/Cellar/emacs/24.4/Emacs.app dest=/Applications/Emacs.app state=link
   when: ansible_os_family == "Darwin"
-  
+
 # TODO this does not work here, move to separate handler file?
 - name: Install emacs packages
   shell: emacs  --batch --eval t

@@ -1,4 +1,4 @@
-(prelude-require-package '(jss
+(prelude-require-packages '(jss
                            jsx-mode
                            web-beautify))
 
