@@ -1,7 +1,12 @@
-(prelude-require-packages '(flymake-jshint
+(prelude-require-packages '(;;auto-complete-config
+                            js2-refactor
+                            ;;closure-snippets-support
+                            flymake-jshint
                             jss
                             jsx-mode
-                            web-beautify))
+                            web-beautify
+                            yasnippet
+                            ))
 
 (require 'server)
 (unless (server-running-p)
@@ -41,36 +46,25 @@ See URL `https://github.com/mdevils/node-jscs'."
  '(flycheck-warning ((((class color)) (:underline "Orange")))))
 
 ;; jshint
-(require 'flymake-jshint)
 (add-hook 'js-mode-hook 'flymake-mode)
 (setq jshint-configuration-path "~/.jshint.json")
 
 ;; autocomplete on
-(require 'auto-complete-config)
-(ac-config-default)
+;(ac-config-default)
 
 ;;yasnippet on
-(require 'yasnippet)
 (yas-global-mode 1)
 
 ;; Closure-snippets
-(let ((closure-snippets "~/closure-snippets/emacs"))
-  (add-to-list 'load-path closure-snippets)
-  (require 'closure-snippets-support)
-  (yas/load-directory closure-snippets))
+;; (let ((closure-snippets "~/closure-snippets/emacs"))
+;;   (add-to-list 'load-path closure-snippets)
+;;   (yas/load-directory closure-snippets))
 (setq yas/prompt-functions '(yas/ido-prompt yas/dropdown-prompt yas/completing-prompt yas/x-prompt yas/no-prompt))
 
 ;; js2-mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (setq js2-basic-offset 2)
 (setq js2-bounce-indent-p t)
-
-;; js2-refactor
-(require 'js2-refactor)
-
-;; calfw
-(require 'calfw-ical)
-(cfw:open-ical-calendar "https://www.google.com/calendar/ical/paul.novak%40schrodinger.com/private-4d1a87800c42350058a998d587720969/basic.ics")
 
 ;; keybindings
 ;; Invoke M-x without alt key

@@ -16,6 +16,6 @@
   when: ansible_pkg_mgr == "apt"
   notify: Install emacs packages
 
-- include: ../../pkg_mgr_homebrew/tasks/install_cask_package.yml package_name=emacs
+- include: ../../pkg_mgr_homebrew/tasks/install_package.yml package_name=emacs install_options=cocoa
   when: ansible_os_family == "Darwin"
   notify: Install emacs packages
