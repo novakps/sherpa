@@ -1,0 +1,4 @@
+---
+
+- name: Install emacs packages
+  shell: emacs  --batch --eval t
