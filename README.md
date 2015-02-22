@@ -4,10 +4,11 @@
 
 ```
 xcode-select --install
-
+```
 click ‘install’
 
 click ‘Agree’
+```
 
 sudo easy_install pip
 
