@@ -1,6 +1,7 @@
-(prelude-require-packages '(jss
-                           jsx-mode
-                           web-beautify))
+(prelude-require-packages '(flymake-jshint
+                            jss
+                            jsx-mode
+                            web-beautify))
 
 (require 'server)
 (unless (server-running-p)
