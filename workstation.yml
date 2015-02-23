@@ -20,6 +20,7 @@
     - git
     - ant
     - gawk
+    - grunt-cli
     - p7zip
     - tmux
     - wget
@@ -27,7 +28,7 @@
     - zsh-completions
     - virtualbox
     - vagrant
-#    - virtualenv 
+    - virtualenv
 
 # databases
     - postgresql
@@ -37,7 +38,7 @@
     - firefox
 
 # livedesign
-#    - python-psycopg2
+    - python-psycopg2
 
 # applications
     - evernote
@@ -52,5 +53,5 @@
     - graphviz
     - vlc
     - the-unarchiver
- 
+
     - users
