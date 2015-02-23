@@ -32,6 +32,7 @@
 
 # databases
     - postgresql
+    - mongodb
 
 # browsers
     - google-chrome
