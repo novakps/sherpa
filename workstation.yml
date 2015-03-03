@@ -1,7 +1,25 @@
 ---
-- hosts: all
 
-  roles:
+ - hosts: os_Darwin
+   gather_facts: false
+   roles:
+     - osx-customizations
+     - pkg_mgr_homebrew
+     - alfred
+     - cord
+     - shiftit
+     - { role: postgresql, postgresql_conf_directory: "/usr/local/postgres" }
+
+ - hosts: pkg_mgr_apt
+   gather_facts: false
+   roles:
+     - pkg_mgr_apt
+     - { role: postgresql, postgresql_conf_directory: "/etc/postgresql/{{ postgresql_version  }}/main/" }
+     - i3
+     - rdesktop
+
+ - hosts: all
+   roles:
 
 # system
     - sshd
@@ -39,7 +57,6 @@
     - firefox
 
 # livedesign
-    - python-psycopg2
 
 # applications
     - evernote

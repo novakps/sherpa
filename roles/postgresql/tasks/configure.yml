@@ -1,0 +1,37 @@
+---
+
+- name: Ensure the data directory exists
+  sudo: yes
+  file:
+    path: "{{postgresql_data_directory}}"
+    owner: "{{ postgresql_service_user }}"
+    group: "{{ postgresql_service_group }}"
+    state: directory
+    mode: 0700
+
+- name: configure pg_hba.conf
+  template:
+    src: pg_hba.conf.j2
+    dest: "{{postgresql_conf_directory}}/pg_hba.conf"
+    owner: "{{ postgresql_service_user }}"
+    group: "{{ postgresql_service_group }}"
+    mode: 0640
+  sudo: yes
+  register: postgresql_configuration_pghba_conf
+
+- name: configure postgresql.conf
+  template:
+    src: postgresql.conf.j2
+    dest: "{{postgresql_conf_directory}}/postgresql.conf"
+    owner: "{{ postgresql_service_user }}"
+    group: "{{ postgresql_service_group }}"
+    mode: 0640
+  sudo: yes
+  register: postgresql_configuration_pghba_conf
+
+- name: Restart PostgreSQL
+  service:
+    name: postgresql
+    state: restarted
+  sudo: yes
+  when: postgresql_configuration_pghba_conf or postgresql_configuration_postgresql_conf
