@@ -94,3 +94,6 @@ See URL `https://github.com/mdevils/node-jscs'."
                 (lambda ()
                   (interactive)
                   (ignore-errors (backward-char 5))))
+
+;; cleanup whitespace on save
+(add-hook 'before-save-hook 'whitespace-cleanup)
