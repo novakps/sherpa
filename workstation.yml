@@ -9,7 +9,12 @@
      - cord
      - shiftit
      - { role: postgresql, postgresql_conf_directory: "/usr/local/postgres" }
-
+     - sourcetree
+     - calibre
+     - skitch
+     - reggy
+     - the-unarchiver
+    
  - hosts: pkg_mgr_apt
    gather_facts: false
    roles:
@@ -47,6 +52,9 @@
     - virtualbox
     - vagrant
     - virtualenv
+    - maven
+    - coreutils
+    - closure-linter
 
 # databases
     - postgresql
@@ -56,20 +64,14 @@
     - google-chrome
     - firefox
 
-# livedesign
-
 # applications
     - evernote
     - google-drive
     - hipchat
-    - sourcetree
-    - calibre
     - gimp
-    - reggy
-    - skitch
     - skype
     - graphviz
     - vlc
-    - the-unarchiver
 
+# customization
     - users
