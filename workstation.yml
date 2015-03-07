@@ -29,10 +29,11 @@
 # system
     - sshd
 
-# text editors
+# text editors and ides
     - emacs
     - vim
     - sublime-text
+    - intellij-idea
 
 # languages
     - java7
