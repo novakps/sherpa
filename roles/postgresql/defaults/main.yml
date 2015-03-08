@@ -1,6 +1,6 @@
 ---
 
-postgresql_version: 9.4
+postgresql_version: 9.3
 
 postgresql_admin_user: "postgres"
 postgresql_service_user:  "{{ postgresql_admin_user }}"
