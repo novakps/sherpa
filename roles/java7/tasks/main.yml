@@ -20,6 +20,12 @@
 - include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=oracle-java7-set-default
   when: ansible_pkg_mgr == "apt" 
 
+- include: ../../pkg_mgr_homebrew/tasks/install_cask_package.yml package_name=java6
+  when: ansible_os_family == "Darwin"
+
 - include: ../../pkg_mgr_homebrew/tasks/install_cask_package.yml package_name=java7
+  when: ansible_os_family == "Darwin"
+
+- include: ../../pkg_mgr_homebrew/tasks/install_cask_package.yml package_name=java
   when: ansible_os_family == "Darwin"
 
