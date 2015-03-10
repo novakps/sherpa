@@ -12,12 +12,12 @@
     state=directory
     mode=0755
     dest={{intellij_install_dir}}
+  sudo: yes
   when: ansible_pkg_mgr == "apt"
 
 - name: Unarchive intellij
   unarchive:
     copy=no
     src={{intellij_tmp}}
-    dest={{intellij_install_dir}}
-  sudo: yes
+    gdest={{intellij_install_dir}}
   when: ansible_pkg_mgr == "apt"
