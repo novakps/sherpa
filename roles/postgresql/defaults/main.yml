@@ -8,8 +8,8 @@ postgresql_service_group:  "{{ postgresql_admin_user }}"
 
 # pg_hba.conf
 postgresql_pg_hba_default:
-  - { type: local, database: all, user: postgresql_admin_user, address: '', method: trust, comment: '"local" is for Unix domain socket connections only' }
-  - { type: host,  database: all, user: postgresql_admin_user, address: '127.0.0.1/32', method: trust, comment: 'IPv4 local connections:' }
+  - { type: local, database: all, user: {{ postgresql_admin_user }}, address: '', method: trust, comment: '"local" is for Unix domain socket connections only' }
+  - { type: host,  database: all, user: {{ postgresql_admin_user }}, address: '127.0.0.1/32', method: trust, comment: 'IPv4 local connections:' }
   - { type: host,  database: all, user: all, address: '::1/128', method: trust, comment: 'IPv6 local connections:' }
   - { type: host,  database: synaptic, user: all, address: '0.0.0.0/0', method: md5 }
   - { type: host,  database: all, user: all, address: '0.0.0.0/0', method: md5 }
