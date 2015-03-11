@@ -1,5 +1,3 @@
---- 
+---
 
  - debug: var=ansible_user_id
- - git_username: novak
- - git_usermail: paul.novak@schrodinger.com

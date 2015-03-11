@@ -8,13 +8,13 @@
      - alfred
      - cord
      - shiftit
-     - { role: postgresql, postgresql_conf_directory: "/usr/local/postgres" }
+#     - { role: postgresql, postgresql_conf_directory: "/usr/local/postgres" }
      - sourcetree
      - calibre
      - skitch
      - reggy
      - the-unarchiver
-    
+
  - hosts: pkg_mgr_apt
    gather_facts: false
    roles:
