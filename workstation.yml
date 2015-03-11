@@ -1,5 +1,9 @@
 ---
 
+ - hosts: all
+# customization
+    - users
+
  - hosts: os_Darwin
    gather_facts: false
    roles:
@@ -74,5 +78,3 @@
     - graphviz
     - vlc
 
-# customization
-    - users
