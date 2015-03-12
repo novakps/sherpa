@@ -19,5 +19,6 @@
   unarchive:
     copy=no
     src={{intellij_tmp}}
-    gdest={{intellij_install_dir}}
+    dest={{intellij_install_dir}}
+  sudo: yes
   when: ansible_pkg_mgr == "apt"
