@@ -10,4 +10,5 @@
 - name: global config
   template:
     src: gitconfig.j2
-    dest: /etc/gitconfig
+    dest: ~/.gitconfig
+    backup: yes

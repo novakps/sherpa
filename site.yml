@@ -11,4 +11,9 @@
 
  - hosts: all
    gather_facts: false
+   tasks:
+     - group_by: key=user_{{ ansible_user_id }}
+
+ - hosts: all
+   gather_facts: false
  - include: workstation.yml
