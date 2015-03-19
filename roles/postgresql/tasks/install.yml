@@ -10,5 +10,8 @@
    homebrew_tap: tap=petere/postgresql
    when: ansible_os_family == "Darwin"
 
+ - homebrew: update_homebrew=yes
+   when: ansible_os_family == "Darwin"
+
  - include: "../../pkg_mgr_homebrew/tasks/install_package.yml state=linked package_name=postgresql-{{ postgresql_version }}"
    when: ansible_os_family == "Darwin"
