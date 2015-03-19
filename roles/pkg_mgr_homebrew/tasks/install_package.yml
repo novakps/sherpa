@@ -3,4 +3,4 @@
 
 - name: install with homebrew
   sudo: no
-  homebrew:  name={{ package_name }} state={{ state | default('latest') }} install_options={{ install_options|default() }}
+  homebrew:  name={{ package_name }} state={{ state | default('latest') }}
