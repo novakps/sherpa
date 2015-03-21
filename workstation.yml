@@ -1,29 +1,20 @@
 ---
 
- - hosts: os_Darwin
-   gather_facts: false
-   roles:
-     - osx-customizations
-     - pkg_mgr_homebrew
-     - alfred
-     - cord
-     - shiftit
-#     - { role: postgresql, postgresql_conf_directory: "/usr/local/postgres" }
-     - sourcetree
-     - calibre
-     - skitch
-     - reggy
-     - the-unarchiver
-
+# package managers
  - hosts: pkg_mgr_apt
    gather_facts: false
    roles:
      - pkg_mgr_apt
-     - { role: postgresql, postgresql_conf_directory: "/etc/postgresql/{{ postgresql_version  }}/main/" }
-     - i3
-     - rdesktop
 
+ - hosts: os_Darwin
+   gather_facts: false
+   roles:
+     - pkg_mgr_homebrew
+
+
+# packages for all
  - hosts: all
+   gather_facts: false
    roles:
 
 # system
@@ -73,3 +64,25 @@
     - skype
     - graphviz
     - vlc
+
+# os-specific packages
+ - hosts: os_Darwin
+   gather_facts: false
+   roles:
+     - osx-customizations
+     - alfred
+     - cord
+     - shiftit
+     - { role: postgresql, postgresql_conf_directory: "/usr/local/postgres" }
+     - sourcetree
+     - calibre
+     - skitch
+     - reggy
+     - the-unarchiver
+
+ - hosts: pkg_mgr_apt
+   gather_facts: false
+   roles:
+     - { role: postgresql, postgresql_conf_directory: "/etc/postgresql/{{ postgresql_version  }}/main/" }
+     - i3
+     - rdesktop
