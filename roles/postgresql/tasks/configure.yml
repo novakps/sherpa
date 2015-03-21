@@ -1,6 +1,6 @@
 ---
 
-vars_files:
+- vars_files:
   - [ "vars/darwin.yml", "vars/default.yml" ]
 
 - name: Ensure the data directory exists
