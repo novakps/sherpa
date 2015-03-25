@@ -13,6 +13,7 @@
 
 - name: Set zsh as default shell
   shell: chsh -s /bin/zsh
+  sudo: yes
   when: ansible_os_family == "Darwin"
 
 - name: Check oh-my-zsh is installed
