@@ -4,8 +4,6 @@
   command: defaults write {{item.domain}} {{item.key}} -{{ item.type }}  {{item.value}}
   with_items: osx.prefs
   when: ansible_os_family == "Darwin"
-  tags:
-    - test
 
 - name: restart Finder and Dock
   command: pkill -f {{ item }}
