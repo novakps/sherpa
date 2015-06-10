@@ -47,6 +47,7 @@
     - maven
     - coreutils
     - closure-linter
+    - tern
 
 # databases
     - postgresql
