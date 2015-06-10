@@ -7,17 +7,14 @@
 
  - name: group by ansible package manager
    hosts: all
-   gather_facts: false
    tasks:
      - group_by: key=pkg_mgr_{{ ansible_pkg_mgr }}
 
  - name: group by user
    hosts: all
-   gather_facts: false
    tasks:
      - group_by: key=user_{{ ansible_user_id }}
 
  - name: Workstation
    hosts: all
-   gather_facts: false
  - include: workstation.yml
