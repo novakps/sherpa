@@ -84,8 +84,7 @@
    gather_facts: false
    roles:
      - { role: postgresql, postgresql_conf_directory: '/usr/local/postgres' }
-   tags:
-     - test
+   tags: test
 
  - hosts: pkg_mgr_apt
    gather_facts: false
