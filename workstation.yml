@@ -80,7 +80,7 @@
      - reggy
      - the-unarchiver
    
- - hosts: all
+ - hosts: os_Darwin
    gather_facts: false
    roles:
      - { role: postgresql, postgresql_conf_directory: '/usr/local/postgres' }
