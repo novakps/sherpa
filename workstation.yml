@@ -87,7 +87,3 @@
      - i3
      - rdesktop
      
-     # user-customization
- - hosts: os_Darwin
-   gather_facts: false
-   roles: { os_Darwin_user_roles }
