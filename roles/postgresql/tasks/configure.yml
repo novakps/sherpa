@@ -45,9 +45,3 @@
   sudo: yes
   register: postgresql_configuration_pghba_conf
 
-- name: Restart PostgreSQL
-  service:
-    name: postgresql
-    state: restarted
-  sudo: yes
-  when: postgresql_configuration_pghba_conf or postgresql_configuration_postgresql_conf
