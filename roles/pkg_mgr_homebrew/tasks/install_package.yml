@@ -1,5 +1,4 @@
 ---
-- debug: var=package_name
 
 - name: install with homebrew
   sudo: no
