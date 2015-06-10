@@ -6,10 +6,12 @@
    roles:
      - pkg_mgr_apt
 
- - name: Set up package manageer homebrew.
+ - name: Set up package manager homebrew.
    hosts: os_Darwin
    roles:
      - pkg_mgr_homebrew
+   tags:
+     - test
 
  - name: Packages for all platforms.
    hosts: all
