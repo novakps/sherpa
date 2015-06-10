@@ -73,7 +73,7 @@
      - alfred
      - cord
      - shiftit
-     - { role: postgresql, postgresql_conf_directory: "/usr/local/postgres" }
+     - { role: postgresql, postgresql_conf_directory: "/usr/local/postgres", tags: ["test"] }
      - sourcetree
      - calibre
      - skitch
