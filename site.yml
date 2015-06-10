@@ -1,19 +1,23 @@
 ---
 
- - hosts: all
+ - name: group by os
+   hosts: all
    tasks:
      - group_by: key=os_{{ ansible_os_family }}
 
- - hosts: all
+ - name: group by ansible package manager
+   hosts: all
    gather_facts: false
    tasks:
      - group_by: key=pkg_mgr_{{ ansible_pkg_mgr }}
 
- - hosts: all
+ - name: group by user
+   hosts: all
    gather_facts: false
    tasks:
      - group_by: key=user_{{ ansible_user_id }}
 
- - hosts: all
+ - name: Workstation
+   hosts: all
    gather_facts: false
  - include: workstation.yml
