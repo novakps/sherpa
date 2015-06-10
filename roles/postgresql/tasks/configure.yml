@@ -16,6 +16,15 @@
     state: directory
     mode: 0700
 
+- name: Ensure the conf directory exists
+  sudo: yes
+  file:
+    path: "{{postgresql_conf_directory}}"
+    owner: "{{ postgresql_service_user }}"
+    group: "{{ postgresql_service_group }}"
+    state: directory
+    mode: 0700
+    
 - name: configure pg_hba.conf
   template:
     src: pg_hba.conf.j2
