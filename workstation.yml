@@ -1,19 +1,20 @@
 ---
 
 # package managers
- - hosts: pkg_mgr_apt
+ - name: Set up package manger apt.
+   hosts: pkg_mgr_apt
    gather_facts: false
    roles:
      - pkg_mgr_apt
 
- - hosts: os_Darwin
+ - name: Set up package manageer homebrew.
+   hosts: os_Darwin
    gather_facts: false
    roles:
      - pkg_mgr_homebrew
 
-
-# packages for all
- - hosts: all
+ - name: Packages for all platforms.
+   hosts: all
    gather_facts: false
    roles:
 
@@ -65,8 +66,8 @@
     - graphviz
     - vlc
 
-# os-specific packages
- - hosts: os_Darwin
+ - name: Darwin-specific packages.
+   hosts: os_Darwin
    gather_facts: false
    roles:
      - osx-customizations
@@ -80,13 +81,15 @@
      - reggy
      - the-unarchiver
    
- - hosts: os_Darwin
+ - name: test 
+   hosts: os_Darwin
    gather_facts: false
    roles:
      - { role: postgresql, postgresql_conf_directory: '/usr/local/postgres' }
    tags: test
 
- - hosts: pkg_mgr_apt
+ - name: Apt-specific packages
+   hosts: pkg_mgr_apt
    gather_facts: false
    roles:
      - { role: postgresql, postgresql_conf_directory: "/etc/postgresql/{{ postgresql_version }}/main/" }
