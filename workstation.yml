@@ -3,19 +3,16 @@
 # package managers
  - name: Set up package manger apt.
    hosts: pkg_mgr_apt
-   gather_facts: false
    roles:
      - pkg_mgr_apt
 
  - name: Set up package manageer homebrew.
    hosts: os_Darwin
-   gather_facts: false
    roles:
      - pkg_mgr_homebrew
 
  - name: Packages for all platforms.
    hosts: all
-   gather_facts: false
    roles:
 
 # system
