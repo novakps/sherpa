@@ -47,7 +47,9 @@ sudo apt-get install -y ansible git
 ```
 git clone https://github.com/novakps/sherpa.git
 
-ansible-playbook —-ask-sudo-pass -i 'localhost,' -c local sherpa/site.yml
+cd sherpa
+
+ansible-playbook site.yml
 ```
 
 
