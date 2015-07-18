@@ -65,7 +65,7 @@
 
  - name: Darwin-specific packages.
    #hosts: os_Darwin
-   host: all
+   hosts: all
    gather_facts: false
    roles:
      - osx-customizations
