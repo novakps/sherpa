@@ -64,7 +64,8 @@
     - vlc
 
  - name: Darwin-specific packages.
-   hosts: os_Darwin
+   #hosts: os_Darwin
+   host: all
    gather_facts: false
    roles:
      - osx-customizations
