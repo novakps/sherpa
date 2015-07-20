@@ -70,7 +70,7 @@
    roles:
      - osx-customizations
      - alfred
-     - cord
+     #- cord
      - shiftit
      - { role: postgresql, postgresql_conf_directory: "/usr/local/postgres", tags: [test] }
      - sourcetree
