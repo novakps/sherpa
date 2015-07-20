@@ -64,17 +64,17 @@
     - vlc
 
  - name: Darwin-specific packages.
-   #hosts: os_Darwin
+   hosts: os_Darwin
    hosts: all
    gather_facts: false
    roles:
      - osx-customizations
      - alfred
-     #- cord
+     #- cord # download issues?
      - shiftit
-     - { role: postgresql, postgresql_conf_directory: "/usr/local/postgres", tags: [test] }
+     - { role: postgresql, postgresql_conf_directory: "/usr/local/postgres" }
      - sourcetree
-     #- calibre
+     #- calibre # download issues?
      - skitch
      - reggy
      - the-unarchiver
