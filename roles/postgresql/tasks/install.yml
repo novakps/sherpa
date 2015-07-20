@@ -5,6 +5,9 @@
 
  - include: "../../pkg_mgr_apt/tasks/install_package.yml package_name=postgresql-contrib-{{ postgresql_version }}"
    when: ansible_pkg_mgr == "apt"
+   
+ - include: "../../pkg_mgr_apt/tasks/install_package.yml package_name=pgadmin3"
+   when: ansible_pkg_mgr == "apt"
 
  - name: Tap postgresql formula for version
    homebrew_tap: tap=petere/postgresql
