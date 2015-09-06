@@ -83,7 +83,7 @@ osx:
       value: 36
       type: int
       domain: com.apple.dock
-    - key: showMisionControlGestureEnabled
+    - key: showMissionControlGestureEnabled
       value: false
       type: bool
       domain: com.apple.dock
