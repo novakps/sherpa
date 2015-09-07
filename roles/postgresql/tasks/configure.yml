@@ -55,6 +55,6 @@
    - postgresql
      
 - name: Setup launch agents for services
-  command: launchctl load {{ home }}/Library/LaunchAgents/homebrew.mxcl.postresql.plist
+  command: launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postresql.plist
   when: ansible_os_family == "Darwin"
   
