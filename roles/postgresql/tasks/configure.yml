@@ -8,7 +8,6 @@
    - "default.yml"
 
 - name: Ensure the data directory exists
-  sudo: yes
   file:
     path: "{{postgresql_data_directory}}"
     owner: "{{ postgresql_service_user }}"
