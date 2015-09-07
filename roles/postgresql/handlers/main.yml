@@ -1,11 +1,11 @@
 ---
   
-- name: postgresql_restart_apt
+- name: restart_postgresql_apt
   service:
     name: postgresql
     state: restarted
   when: ansible_pkg_mgr == "apt"
    
-- name: postgresql_restart_darwin
+- name: restart_postgresql_darwin
   command: launchctl load {{ home }}/Library/LaunchAgents/homebrew.mxcl.postresql.plist
   when: ansible_os_family == "Darwin"
