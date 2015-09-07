@@ -2,4 +2,4 @@
 
 postgresql_data_directory: "/usr/local/var/postgresql/{{postgresql_version}}"
 postgresql_admin_user: "{{  ansible_user_id }}"
-postgresql_server_group: staff
+postgresql_service_group: staff
