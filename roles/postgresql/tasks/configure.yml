@@ -32,7 +32,7 @@
     group: "{{ postgresql_service_group }}"
     mode: 0640
   sudo: yes
-  register: postgresql_configuration_pghba_conf
+  register: postgresql_configuration.changed
 
 - name: configure postgresql.conf
   template:
@@ -42,5 +42,23 @@
     group: "{{ postgresql_service_group }}"
     mode: 0640
   sudo: yes
-  register: postgresql_configuration_pghba_conf
+  register: postgresql_configuration.changed
+  
+- name: PostgreSQL | Restart PostgreSQL
+  service:
+    name: postgresql
+    state: restarted
+  when: postgresql_configuration.changed and ansible_pkg_mgr == "apt"
+  
+- name: Start services at login
+  file: src=/usr/local/opt/{{ item }}/homebrew.mxcl.{{ item }}.plist path=~/Library/LaunchAgents/homebrew.mxcl.{{ item }}.plist state=link force=yes
+  with_items: 
+    - postgresql
+  when: ansible_os_family == "Darwin"
+
+- name: Setup launch agents for services
+  command: launchctl load {{ home }}/Library/LaunchAgents/homebrew.mxcl.{{ item }}.plist
+  with_items:
+    - postgresql
+  when: ansible_os_family == "Darwin"
 
