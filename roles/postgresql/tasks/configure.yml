@@ -51,7 +51,7 @@
 - name: Start services at login
   file: src=/usr/local/opt/{{ item }}/homebrew.mxcl.{{ item }}.plist path=~/Library/LaunchAgents/homebrew.mxcl.{{ item }}.plist state=link force=yes
   when: ansible_os_family == "Darwin"
-  with: 
+  with_items: 
    - postgresql
      
 - name: Setup launch agents for services
