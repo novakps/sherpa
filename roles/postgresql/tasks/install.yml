@@ -9,10 +9,6 @@
  - include: "../../pkg_mgr_apt/tasks/install_package.yml package_name=pgadmin3"
    when: ansible_pkg_mgr == "apt"
 
- - name: Tap postgresql formula for version
-   homebrew_tap: tap=petere/postgresql
-   when: ansible_os_family == "Darwin"
-
  - homebrew: update_homebrew=yes
    when: ansible_os_family == "Darwin"
 
