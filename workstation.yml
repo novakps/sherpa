@@ -72,7 +72,7 @@
      - alfred
      #- cord # download issues?
      - shiftit
-     - { role: postgresql, postgresql_conf_directory: "/usr/local/postgres" }
+     - postgresql
      - sourcetree
      #- calibre # download issues?
      - skitch
