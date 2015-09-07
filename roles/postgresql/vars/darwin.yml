@@ -1,4 +1,3 @@
 ---
 
-postgresql_admin_user: "{{ ansible_user_id }}"
 postgresql_data_directory: "/usr/local/var/postgresql/{{postgresql_version}}"
