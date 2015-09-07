@@ -70,6 +70,8 @@
    roles:
      - osx-customizations
      - alfred
+     - amethyst
+     - atom
      #- cord # download issues?
      - shiftit
      - postgresql
