@@ -34,8 +34,8 @@
     mode: 0640
   sudo: yes
   notify: 
-   - restart_postgres_apt
-   - restart_postgers_darwin
+   - restart_postgresql_apt
+   - restart_postgresql_darwin
 
 - name: configure postgresql.conf
   template:
@@ -46,8 +46,8 @@
     mode: 0640
   sudo: yes
   notify: 
-   - restart_postgres_apt
-   - restart_postgers_darwin
+   - restart_postgresql_apt
+   - restart_postgresql_darwin
 
 - name: Start services at login
   file: src=/usr/local/opt/{{ item }}/homebrew.mxcl.{{ item }}.plist path=~/Library/LaunchAgents/homebrew.mxcl.{{ item }}.plist state=link force=yes
