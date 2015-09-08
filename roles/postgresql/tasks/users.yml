@@ -1,6 +1,5 @@
 - name: ensure superuser
-  postgresql_user: 
-    name: postgres
-    password: user 
-    role_attr_flags:SUPERUSER
-  
+postgresql_user: 
+  name: postgres
+  password: user 
+  role_attr_flags:SUPERUSER
