@@ -48,6 +48,10 @@
   notify: 
    - restart_postgresql_apt
    - restart_postgresql_darwin
+   
+- name: Initialize database
+  command: initdb creates="{{ postgresql_data_directory }}/posgresql.conf"
+  when: ansible_os_family == "Darwin"
 
 - name: Start services at login
   file: src=/usr/local/opt/{{ item }}/homebrew.mxcl.{{ item }}.plist path=~/Library/LaunchAgents/homebrew.mxcl.{{ item }}.plist state=link force=yes
