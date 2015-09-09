@@ -50,7 +50,7 @@
    - restart_postgresql_darwin
    
 - name: Initialize database
-  command: initdb creates="{{ postgresql_data_directory }}/posgresql.conf"
+  command: initdb -D {{ postgresql_data_directory }} creates={{ postgresql_data_directory }}/posgresql.conf
   when: ansible_os_family == "Darwin"
 
 - name: Start services at login
