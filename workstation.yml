@@ -81,6 +81,7 @@
      - skitch
      - reggy
      - the-unarchiver
+     - services
   
  - name: Apt-specific packages
    hosts: pkg_mgr_apt
