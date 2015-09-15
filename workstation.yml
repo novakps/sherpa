@@ -74,7 +74,6 @@
      - amethyst
      - atom
      #- cord # download issues?
-     - lunchy
      - shiftit
      - postgresql
      - sourcetree
