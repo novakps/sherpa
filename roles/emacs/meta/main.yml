@@ -2,3 +2,4 @@
 dependencies:
   - { role: git }
   - { role: js-beautify }
+  - { role: services }
