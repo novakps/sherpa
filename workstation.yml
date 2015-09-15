@@ -69,6 +69,7 @@
    gather_facts: false
    roles:
      - osx-customizations
+     - services
      - alfred
      - amethyst
      - atom
@@ -81,7 +82,6 @@
      - skitch
      - reggy
      - the-unarchiver
-     - services
   
  - name: Apt-specific packages
    hosts: pkg_mgr_apt
