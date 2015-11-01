@@ -4,6 +4,8 @@
                             flymake-jshint
                             jss
                             jsx-mode
+                            tern
+                            tern-auto-complete
                             web-beautify
                             yasnippet
                             ))
