@@ -1,5 +1,6 @@
 ---
 
-postgresql_data_directory: "/usr/local/var/postgresql/{{postgresql_version}}"
+postgresql_conf_directory: "/usr/local/var/postgres"
+postgresql_data_directory: "{{ postgresql_conf_directory }}"
 postgresql_admin_user: "{{  ansible_user_id }}"
 postgresql_service_group: staff

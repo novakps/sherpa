@@ -10,7 +10,7 @@
    hosts: os_Darwin
    roles:
      - pkg_mgr_homebrew
-   
+
  - name: Packages for all platforms.
    hosts: all
    roles:
@@ -81,7 +81,7 @@
      - skitch
      - reggy
      - the-unarchiver
-  
+
  - name: Apt-specific packages
    hosts: pkg_mgr_apt
    gather_facts: false
@@ -89,4 +89,3 @@
      - { role: postgresql, postgresql_conf_directory: "/etc/postgresql/{{ postgresql_version }}/main/" }
      - i3
      - rdesktop
-     
