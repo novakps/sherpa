@@ -1,6 +1,6 @@
 ---
 
-- include: ../../pkg_mgr_homebrew/tasks/install_cask_package.yml package_name=intellij-idea13
+- include: ../../pkg_mgr_homebrew/tasks/install_cask_package.yml package_name=intellij-idea
   when: ansible_os_family == "Darwin"
 
 - name: Download intellij
