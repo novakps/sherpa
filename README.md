@@ -24,7 +24,11 @@ softwareupdate --install --all
 
 sudo easy_install pip
 
-sudo pip install ansible
+sudo pip install --upgrade setuptools --user python
+
+sudo pip install --ignore-installed ansible
+
+sudo chown -R `whoami`:admin /usr/local
 
 ```
 
@@ -33,7 +37,7 @@ sudo pip install ansible
 ### install ansible and git
 
 ```
-sudo apt-add-repository -y ppa:ansible/ansible 
+sudo apt-add-repository -y ppa:ansible/ansible
 
 sudo apt-get update
 
@@ -51,6 +55,3 @@ cd sherpa
 
 ansible-playbook site.yml
 ```
-
-
-
