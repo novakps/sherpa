@@ -12,3 +12,9 @@
     src: gitconfig.j2
     dest: ~/.gitconfig
     backup: yes
+
+- name: global gitignore
+  template:
+    src: gitignore_global
+    dest: ~/.gitignore_global
+    backup: yes

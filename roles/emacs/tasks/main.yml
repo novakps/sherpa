@@ -4,13 +4,20 @@
     repo=https://github.com/bbatsov/prelude.git
     accept_hostkey=yes
     dest=~/.emacs.d
-    force=no
+    force=yes
 
 - name: prelude modules
   copy: src=prelude-modules.el dest=~/.emacs.d backup=yes
 
 - name: prelude config
   copy: src=init.el dest=~/.emacs.d/personal backup=yes
+
+- name: Clone closure-snippets
+  git: >
+    repo=https://github.com/derekslager/closure-snippets.git
+    accept_hostkey=yes
+    dest=~/.emacs.d/closure-snippets
+    force=yes
 
 - include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=emacs
   when: ansible_pkg_mgr == "apt"

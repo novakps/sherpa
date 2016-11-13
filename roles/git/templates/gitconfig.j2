@@ -9,7 +9,7 @@
 
 [core]
   editor = {{ git_coreeditor|default('vi') }}
+  excludesfile = {{ ansible_env.HOME }}/.gitignore_global
 
 [push]
   default = {{ git_pushdefault|default('current')  }}
-

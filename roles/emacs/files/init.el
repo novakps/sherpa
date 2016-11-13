@@ -1,9 +1,10 @@
-(prelude-require-packages '(;;auto-complete-config
+(prelude-require-packages '(
+                            ag
+                            auto-complete
                             js2-refactor
-                            ;;closure-snippets-support
+                            js3-mode
                             flymake-jshint
                             jss
-                            jsx-mode
                             tern
                             tern-auto-complete
                             web-beautify
@@ -13,6 +14,9 @@
 (require 'server)
 (unless (server-running-p)
   (server-start))
+
+;; color ag results
+(setq ag-highlight-search t)
 
 ;; javascript indent level
 (setq js-indent-level 2)
@@ -27,7 +31,7 @@
 (global-linum-mode t)
 
 ;; flycheck with jscs
-(flycheck-def-config-file-var flycheck-jscs javascript-jscs "~/git/seurat/SEURAT-JavaScript/.jscs.json"
+ (flycheck-def-config-file-var flycheck-jscs javascript-jscs "~/git/seurat/SEURAT-JavaScript/.jscs.json"
   :safe #'stringp)
 
 (flycheck-define-checker javascript-jscs
@@ -52,21 +56,32 @@ See URL `https://github.com/mdevils/node-jscs'."
 (setq jshint-configuration-path "~/.jshint.json")
 
 ;; autocomplete on
-;(ac-config-default)
+(ac-config-default)
+(global-auto-complete-mode t)
 
 ;;yasnippet on
 (yas-global-mode 1)
 
 ;; Closure-snippets
-;; (let ((closure-snippets "~/closure-snippets/emacs"))
-;;   (add-to-list 'load-path closure-snippets)
-;;   (yas/load-directory closure-snippets))
+(let ((closure-snippets "~/.emacs.d/closure-snippets/emacs"))
+    (add-to-list 'load-path closure-snippets)
+    (yas/load-directory closure-snippets))
 (setq yas/prompt-functions '(yas/ido-prompt yas/dropdown-prompt yas/completing-prompt yas/x-prompt yas/no-prompt))
 
 ;; js2-mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'interpreter-mode-alist '("node" . js2-mode))
 (setq js2-basic-offset 2)
 (setq js2-bounce-indent-p t)
+(add-hook 'js-mode-hook 'js2-minor-mode)
+(add-hook 'js-mode-hook (lambda () (tern-mode t)))
+
+(eval-after-load 'tern
+  '(progn
+     (require 'tern-auto-complete)
+     (tern-ac-setup)))
+(add-hook 'js2-mode-hook 'tern-mode)
+(add-hook 'js-mode-hook 'tern-mode)
 
 ;; keybindings
 ;; Invoke M-x without alt key

@@ -9,7 +9,8 @@
  - name: Set up package manager homebrew.
    hosts: os_Darwin
    roles:
-     - pkg_mgr_homebrew
+     #- pkg_mgr_homebrew
+    - geerlingguy.homebrew
 
  - name: Packages for all platforms.
    hosts: all
@@ -21,61 +22,64 @@
 # text editors and ides
     - emacs
     - vim
-    - sublime-text
-    - intellij-idea
+#    - sublime-text
+#   - intellij-idea
 
 # languages
-    - java
+#    - java
     - nodejs
     - python
 
 # development tools
-    - git
+    - ack
+    - ag
     - ant
+    - closure-linter
+    - coreutils
     - gawk
+    - git
     - grunt-cli
+    - maven
+    - nginx
     - p7zip
+    - tern
     - tmux
+    - vagrant
+    - virtualbox
+    - virtualenv
     - wget
     - zsh
     - zsh-completions
-    - virtualbox
-    - vagrant
-    - virtualenv
-    - maven
-    - coreutils
-    - closure-linter
-    - tern
 
 # databases
     - mongodb
+#    - postgresql
 
 # browsers
     - google-chrome
     - firefox
 
 # applications
-    - evernote
+#    - evernote
     - google-drive
     - hipchat
     - gimp
-    - skype
-    - graphviz
-    - vlc
+#    - skype
+#    - graphviz
+#    - vlc
 
  - name: Darwin-specific packages.
    hosts: os_Darwin
-   hosts: all
    gather_facts: false
    roles:
      - osx-customizations
      - services
-     - alfred
+ #    - alfred
      - amethyst
-     - atom
+ #    - atom
      #- cord # download issues?
-     - shiftit
-     - postgresql
+ #    - shiftit
+
      - sourcetree
      #- calibre # download issues?
      - skitch
