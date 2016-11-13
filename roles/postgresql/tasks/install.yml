@@ -1,5 +1,34 @@
 ---
 
+ - name: PostgreSQL | Make sure the CA certificates are available
+   apt:
+     pkg: ca-certificates
+     state: present
+   when: ansible_pkg_mgr == "apt"
+
+ - name: PostgreSQL | Add PostgreSQL repository apt-key
+   sudo: yes
+   apt_key:
+     id: "{{ postgresql_apt_key_id }}"
+     url: "{{ postgresql_apt_key_url }}"
+     state: present
+   when: postgresql_apt_key_url and postgresql_apt_key_id
+
+ - name: PostgreSQL | Add PostgreSQL repository
+   sudo: yes
+   apt_repository:
+     repo: "{{ postgresql_apt_repository }}"
+     state: present
+   when: postgresql_apt_repository
+
+ - name: PostgreSQL | Make sure the dependencies are installed
+   apt:
+     pkg: "{{item}}"
+     state: present
+     update_cache: yes
+     cache_valid_time: "{{apt_cache_valid_time | default (3600)}}"
+   with_items: ["python-psycopg2", "python-pycurl", "locales"]
+
  - include: "../../pkg_mgr_apt/tasks/install_package.yml package_name=postgresql-{{ postgresql_version }}"
    when: ansible_pkg_mgr == "apt"
 
