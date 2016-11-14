@@ -32,7 +32,7 @@ sudo chown -R `whoami`:admin /usr/local
 
 ```
 
-## Ubuntu 14.04:
+## Ubuntu 16.04:
 
 ### install ansible and git
 
