@@ -1,0 +1,5 @@
+---
+
+- name: Install ack
+  apt: name=ack-grep state=latest
+  become: true

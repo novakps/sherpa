@@ -1,0 +1,4 @@
+---
+
+- name: Install ack
+  homebrew: name=ack state=latest

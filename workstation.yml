@@ -90,6 +90,6 @@
    hosts: pkg_mgr_apt
    gather_facts: false
    roles:
-     - { role: postgresql, postgresql_conf_directory: "/etc/postgresql/{{ postgresql_version }}/main/" }
+#     - { role: postgresql, postgresql_conf_directory: "/etc/postgresql/{{ postgresql_version }}/main/" }
      - i3
      - rdesktop
