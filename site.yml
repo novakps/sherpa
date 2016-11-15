@@ -5,11 +5,6 @@
    tasks:
      - group_by: key=os_{{ ansible_os_family }}
 
- - name: group by ansible package manager
-   hosts: all
-   tasks:
-     - group_by: key=pkg_mgr_{{ ansible_pkg_mgr }}
-
  - name: group by user
    hosts: all
    tasks:
