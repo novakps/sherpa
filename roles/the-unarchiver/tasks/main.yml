@@ -1,5 +1,8 @@
 ---
 
-- include: ../../pkg_mgr_homebrew/tasks/install_cask_package.yml package_name=the-unarchiver
-  when: ansible_os_family == "Darwin"
-  notify: linkapps
+- name: Install the-unarchiver with homebrew cask
+  homebrew_cask: name=the-unarchiver state=present
+  environment:
+    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
+  become: true
+  when: ansible_os_family == 'Darwin'

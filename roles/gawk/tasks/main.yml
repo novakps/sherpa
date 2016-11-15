@@ -1,8 +1,7 @@
 ---
 
-- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=gawk
-  when: ansible_pkg_mgr == "apt"
+- include: ubuntu.yml
+  when: ansible_os_family == 'Ubuntu'
 
-- include: ../../pkg_mgr_homebrew/tasks/install_package.yml package_name=gawk
+- include: osx.yml
   when: ansible_os_family == "Darwin"
-  

@@ -1,0 +1,37 @@
+---
+
+- name: PostgreSQL | Make sure the CA certificates are available
+  apt:
+    pkg: ca-certificates
+    state: present
+
+- name: PostgreSQL | Add PostgreSQL repository apt-key
+  become: true
+  apt_key:
+    id: "{{ postgresql_apt_key_id }}"
+    url: "{{ postgresql_apt_key_url }}"
+    state: present
+  when: postgresql_apt_key_url and postgresql_apt_key_id
+
+- name: PostgreSQL | Add PostgreSQL repository
+  become: true
+  apt_repository:
+    repo: "{{ postgresql_apt_repository }}"
+    state: present
+  when: postgresql_apt_repository
+
+- name: PostgreSQL | Make sure the dependencies are installed
+  apt:
+    pkg: "{{item}}"
+    state: present
+    update_cache: yes
+    cache_valid_time: "{{apt_cache_valid_time | default (3600)}}"
+  with_items: ["python-psycopg2", "python-pycurl", "locales"]
+
+- name: Install postgres with apt
+  apt: name="postgresql-contrib-{{ postgresql_version }}" state=latest
+  become: true
+
+- name: Install pgadmin3
+  apt: name=pgadmin3 state=latest
+  become: true

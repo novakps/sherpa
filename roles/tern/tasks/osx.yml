@@ -1,0 +1,7 @@
+---
+
+ - npm: name=tern@0.13.0 global=yes state=present
+   when: ansible_os_family == 'Darwin'
+
+ - npm: name=google/tern-closure global=yes state=present
+   when: ansible_os_family == 'Darwin'

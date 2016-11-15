@@ -1,0 +1,9 @@
+---
+
+- name: Install zsh with apt
+  apt: name=zsh state=latest
+  become: true
+
+- name: Set zsh as default shell
+  user: name={{ ansible_user_id }} shell=/bin/zsh
+  become: true

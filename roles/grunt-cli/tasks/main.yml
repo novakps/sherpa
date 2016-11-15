@@ -1,8 +1,7 @@
 ---
 
- - npm: name=grunt-cli global=yes state=present
-   become: yes
-   when: ansible_distribution in [ 'Ubuntu' ]
+- include: ubuntu.yml
+  when: ansible_os_family == 'Ubuntu'
 
- - npm: name=grunt-cli global=yes state=present
-   when: ansible_os_family == 'Darwin'
+- include: osx.yml
+  when: ansible_os_family == "Darwin"

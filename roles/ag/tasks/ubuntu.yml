@@ -1,0 +1,5 @@
+---
+
+- name: Install ag with apt
+  apt: name=silversearcher-ag state=latest
+  become: true

@@ -41,7 +41,7 @@ osx:
       value: false
       type: bool
       domain: com.apple.LaunchServices
-  
+
     # Trackpad
     - key: Clicking
       value: false
@@ -91,4 +91,3 @@ osx:
       value: true
       type: bool
       domain: com.apple.dock
-

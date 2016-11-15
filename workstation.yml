@@ -2,94 +2,81 @@
 
 # package managers
  - name: Set up package manager apt.
-   hosts: pkg_mgr_apt
+   hosts: os_Ubuntu
    roles:
-     - pkg_mgr_apt
+     - apt
 
  - name: Set up package manager homebrew.
    hosts: os_Darwin
    roles:
-     #- pkg_mgr_homebrew
     - geerlingguy.homebrew
 
  - name: Packages for all platforms.
    hosts: all
    roles:
+     - sshd
 
-# system
-    - sshd
+     # text editors and ides
+     - intellij-idea
+     - sublime-text
+     - vim
+     - emacs
 
-# text editors and ides
-    - emacs
-    - vim
-#    - sublime-text
-#   - intellij-idea
+     # languages
+     - java
+     - nodejs
+     - python
 
-# languages
-#    - java
-    - nodejs
-    - python
+     # development tools
+     - ack
+     - ag
+     - ant
+     - closure-linter
+     - coreutils
+     - gawk
+     - git
+     - grunt-cli
+     - maven
+     - nginx
+     - p7zip
+     - tern
+     - tmux
+     - vagrant
+     - virtualbox
+     - virtualenv
+     - wget
+     - zsh
+     - zsh-completions
 
-# development tools
-    - ack
-    - ag
-    - ant
-    - closure-linter
-    - coreutils
-    - gawk
-    - git
-    - grunt-cli
-    - maven
-    - nginx
-    - p7zip
-    - tern
-    - tmux
-    - vagrant
-    - virtualbox
-    - virtualenv
-    - wget
-    - zsh
-    - zsh-completions
+     # databases
+     #- postgresql
+     - mongodb
 
-# databases
-    - mongodb
-#    - postgresql
+     # browsers
+     - firefox
+     - google-chrome
 
-# browsers
-    - google-chrome
-    - firefox
+     # applications
+     - evernote
+     - gimp
+     - google-drive
+     - hipchat
+     - skype
+     - vlc
 
-# applications
-#    - evernote
-    - google-drive
-    - hipchat
-#    - gimp
-#    - skype
-#    - graphviz
-#    - vlc
-
- - name: Darwin-specific packages.
-   hosts: os_Darwin
-   gather_facts: false
-   roles:
-     - osx-customizations
-     - services
- #    - alfred
+     # osx
+     - alfred
      - amethyst
- #    - atom
-     #- cord # download issues?
- #    - shiftit
-
-     - sourcetree
-     #- calibre # download issues?
-     - skitch
+     - atom
+     - calibre
+     - cord
+     - osx-customizations
      - reggy
+     - services
+     - skitch
+     - sourcetree
      - the-unarchiver
 
- - name: Apt-specific packages
-   hosts: pkg_mgr_apt
-   gather_facts: false
-   roles:
-#     - { role: postgresql, postgresql_conf_directory: "/etc/postgresql/{{ postgresql_version }}/main/" }
+     # ubuntu
      - i3
      - rdesktop

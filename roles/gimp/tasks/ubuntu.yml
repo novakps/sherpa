@@ -1,0 +1,14 @@
+---
+
+
+- name: Add ppa
+  apt_repository:
+  become: true
+  args:
+    state: present
+    repo:  'ppa:otto-kesselgulasch/gimp'
+    update_cache: yes
+
+- name: Install gimp with apt
+  apt: name=gimp state=latest
+  become: true

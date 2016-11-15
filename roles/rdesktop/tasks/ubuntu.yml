@@ -1,0 +1,5 @@
+---
+
+- name: Install rdesktop with apt
+  apt: name=rdesktop state=latest
+  become: true

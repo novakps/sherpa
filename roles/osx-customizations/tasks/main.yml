@@ -1,8 +1,8 @@
 ---
 
-- name: "OS X Preferences"
-  command: defaults write {{item.domain}} {{item.key}} -{{ item.type }}  {{item.value}}
-  with_items: osx.prefs
+- name: "Set OS X Preferences"
+  command: defaults write {{ item.domain }} {{ item.key }} -{{ item.type }}  {{ item.value }}
+  with_items: "{{ osx.prefs }}"
   when: ansible_os_family == "Darwin"
 
 - name: restart Finder and Dock

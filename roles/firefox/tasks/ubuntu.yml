@@ -1,0 +1,5 @@
+---
+
+- name: Install firefox with apt
+  apt: name=firefox state=latest
+  become: true

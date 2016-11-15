@@ -1,0 +1,4 @@
+---
+
+- name: Install nginx with homebrew
+  homebrew: name=nginx state=latest

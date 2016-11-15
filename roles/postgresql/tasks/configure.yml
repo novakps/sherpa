@@ -20,7 +20,7 @@
   when: ansible_os_family == "Darwin"
 
 - name: Ensure the data directory exists
-  sudo: yes
+  become: true
   file:
     path: "{{postgresql_data_directory}}"
     owner: "{{ postgresql_service_user }}"
@@ -29,7 +29,7 @@
     mode: 0700
 
 - name: Ensure the conf directory exists
-  sudo: yes
+  become: true
   file:
     path: "{{postgresql_conf_directory}}"
     owner: "{{ postgresql_service_user }}"
@@ -46,7 +46,7 @@
     mode: 0640
     force: yes
     backup: yes
-  sudo: yes
+  become: true
   notify:
    - restart_postgresql_apt
    - restart_postgresql_darwin
@@ -60,7 +60,7 @@
     owner: "{{ postgresql_service_user }}"
     group: "{{ postgresql_service_group }}"
     mode: 0640
-  sudo: yes
+  become: true
   notify:
    - restart_postgresql_apt
    - restart_postgresql_darwin

@@ -1,17 +1,7 @@
 ---
 
- - npm: name=tern@0.13.0 global=yes state=present
-   sudo: yes
-   when: ansible_distribution in [ 'Ubuntu' ]
+- include: ubuntu.yml
+  when: ansible_os_family == 'Ubuntu'
 
- - npm: name=google/tern-closure global=yes state=present
-   sudo: yes
-   when: ansible_distribution in [ 'Ubuntu' ]
-
- - npm: name=tern@0.13.0 global=yes state=present
-   sudo: no
-   when: ansible_os_family == 'Darwin'
-
- - npm: name=google/tern-closure global=yes state=present
-   sudo: no
-   when: ansible_os_family == 'Darwin'
+- include: osx.yml
+  when: ansible_os_family == "Darwin"

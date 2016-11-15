@@ -1,4 +1,9 @@
 ---
 
-- include: ../../pkg_mgr_homebrew/tasks/install_cask_package.yml package_name=skitch
+# TODO consider adding hotshots role for linux?
+- name: Install skitch with homebrew cask
+  homebrew_cask: name=skitch state=present
+  environment:
+    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
+  become: true
   when: ansible_os_family == "Darwin"

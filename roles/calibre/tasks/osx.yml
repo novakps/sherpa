@@ -1,0 +1,7 @@
+---
+
+- name: Install calibre with homebrew cask.
+  homebrew_cask: name=calibre state=present
+  environment:
+    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
+  become: true

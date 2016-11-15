@@ -1,0 +1,4 @@
+---
+
+- name: Install ant with homebrew
+  homebrew: name=ant state=present

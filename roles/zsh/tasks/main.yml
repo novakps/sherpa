@@ -1,19 +1,9 @@
 ---
 
-- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=zsh
-  when: ansible_pkg_mgr == "apt"
+- include: ubuntu.yml
+  when: ansible_os_family == "Ubuntu"
 
-- include: ../../pkg_mgr_homebrew/tasks/install_package.yml package_name=zsh
-  when: ansible_os_family == "Darwin"
-
-- name: Set zsh as default shell
-  user: name={{ ansible_user_id }} shell=/bin/zsh
-  become: yes
-  when: ansible_pkg_mgr == "apt"
-
-- name: Set zsh as default shell
-  shell: dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
-  become: yes
+- include: osx.yml
   when: ansible_os_family == "Darwin"
 
 - name: Check oh-my-zsh is installed

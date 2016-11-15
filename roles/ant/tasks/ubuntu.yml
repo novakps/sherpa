@@ -1,0 +1,5 @@
+---
+
+- name: Install ant with apt
+  apt: name=ant state=latest
+  become: true

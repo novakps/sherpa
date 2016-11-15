@@ -1,0 +1,7 @@
+---
+
+- name: Install google-drive with homebrew cask
+  homebrew_cask: name=google-drive state=present
+  environment:
+    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
+  become: true

@@ -1,8 +1,8 @@
 ---
 
-- include: ../../pkg_mgr_apt/tasks/install_package.yml package_name=chromium-browser
-  when: ansible_pkg_mgr == "apt" 
 
-- include: ../../pkg_mgr_homebrew/tasks/install_cask_package.yml package_name=google-chrome
+- include: ubuntu.yml
+  when: ansible_os_family == 'Ubuntu'
+
+- include: osx.yml
   when: ansible_os_family == "Darwin"
-  notify: linkapps

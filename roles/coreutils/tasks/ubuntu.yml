@@ -1,0 +1,5 @@
+---
+
+- name: Install coreutils with apt
+  apt: name=coreutils state=latest
+  become: true

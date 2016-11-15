@@ -1,0 +1,5 @@
+---
+
+- name: Install mongodb with apt
+  apt: name=mongodb state=latest
+  become: true

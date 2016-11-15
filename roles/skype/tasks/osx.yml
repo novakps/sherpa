@@ -1,0 +1,7 @@
+---
+
+- name: Install skype with homebrew cask
+  homebrew_cask: name=skype state=present
+  environment:
+    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
+  become: true

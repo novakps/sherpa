@@ -1,0 +1,4 @@
+---
+
+- name: Install p7zip with homebrew
+  homebrew: name=p7zip state=latest

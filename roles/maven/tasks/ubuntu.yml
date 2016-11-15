@@ -1,0 +1,5 @@
+---
+
+- name: Install maven with apt
+  apt: name=maven state=latest
+  become: true

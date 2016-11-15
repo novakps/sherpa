@@ -1,0 +1,6 @@
+---
+
+- name: Install emacs with apt
+  apt: name=emacs state=latest
+  become: true
+  notify: Install emacs packages

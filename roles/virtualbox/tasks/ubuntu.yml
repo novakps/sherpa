@@ -1,0 +1,18 @@
+---
+
+- name: add VirtualBox repo signing key
+  apt_key: state=present
+           url=http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc
+  become: true
+
+- name: add virtualbox repo
+  apt_repository: repo='deb http://download.virtualbox.org/virtualbox/debian trusty contrib' state=present
+  become: true
+
+- name: Install dkms
+  apt: name=dkms state=latest
+  become: true
+
+- name: Install virtualbox
+  apt: name=virtualbox-4.3
+  become: true

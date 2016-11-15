@@ -1,0 +1,4 @@
+---
+
+- name: Install js-beautify with npm
+  npm: name=js-beautify global=yes state=latest

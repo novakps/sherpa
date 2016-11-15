@@ -1,0 +1,12 @@
+---
+- name: Install sshd with apt-key
+  apt: name=openssh-server state=latest
+  become: true
+  notify:
+    - restart sshd
+
+- name: ensure sshd is configured
+  template: src=sshd_config.j2 dest=/etc/ssh/sshd_config backup=yes
+  become: true
+  notify:
+    - restart sshd

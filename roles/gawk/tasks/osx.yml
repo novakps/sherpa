@@ -1,0 +1,4 @@
+---
+
+- name: Install gawk with homebrew
+  homebrew: name=gawk state=latest

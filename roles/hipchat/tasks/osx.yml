@@ -1,0 +1,7 @@
+---
+
+- name: Install hipchat with homebrew cask
+  homebrew_cask: name=hipchat state=present
+  environment:
+    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
+  become: true

@@ -1,0 +1,26 @@
+---
+
+- name: Add Oracle ppa for Ubuntu
+  apt_repository:
+  become: true
+  args:
+    state: present
+    repo: "ppa:webupd8team/java"
+    update_cache: yes
+
+- name: Accept Oracle license
+  debconf: name=Oracle-java7-installer question='shared/accepted-oracle-license-v1-1' value='true' vtype='select'
+  become: true
+
+- name: Install java6 with apt
+  apt: name=oracle-java6-installer
+
+- name: Install java7 with apt
+  apt: name=oracle-java7-installer
+  become: true
+
+- name: Install java8 with apt
+  apt: name=oracle-java8-installer
+  become: true
+
+# TODO: add Java9 installer when its ready

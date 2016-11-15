@@ -1,0 +1,11 @@
+---
+
+# pin version
+- name: Install postgres with homebrew
+  homebrew: name=postgresql state=latest
+
+- name: Install postgresql with homebrew cask
+  homebrew_cask: name=pgadmin3 state=present
+  environment:
+    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
+  become: true

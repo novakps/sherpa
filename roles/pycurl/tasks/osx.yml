@@ -1,0 +1,4 @@
+---
+
+- name: Install pycurl with pip
+  pip: name=pycurl
