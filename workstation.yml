@@ -1,33 +1,22 @@
 ---
 
-# package managers
- - name: Set up package manager apt.
-   hosts: os_Ubuntu
-   roles:
-     - apt
-
- - name: Set up package manager homebrew.
-   hosts: os_Darwin
-   roles:
-    - geerlingguy.homebrew
-
- - name: Packages for all platforms.
+ - name: Packages for workstations
    hosts: all
    roles:
-     - sshd
 
      # text editors and ides
      - intellij-idea
      - sublime-text
      - vim
      - emacs
+     - atom
 
      # languages
      - java
      - nodejs
      - python
 
-     # development tools
+     # development tools and utils
      - ack
      - ag
      - ant
@@ -36,9 +25,11 @@
      - gawk
      - git
      - grunt-cli
+     - js-beautify
      - maven
      - nginx
      - p7zip
+     - sshd
      - tern
      - tmux
      - vagrant
@@ -67,7 +58,6 @@
      # osx
      - alfred
      - amethyst
-     - atom
      - calibre
      - cord
      - osx-customizations
