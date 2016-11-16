@@ -1,6 +1,6 @@
 ---
 
 - include: ubuntu.yml
-  when: ansible_os_family == 'Ubuntu'
+  when: ansible_distribution == 'Ubuntu'
 
 # TODO different path for osx

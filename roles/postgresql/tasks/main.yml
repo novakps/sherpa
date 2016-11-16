@@ -1,7 +1,7 @@
 ---
 
 - include: install_ubuntu.yml
-  when: ansible_os_family == 'Ubuntu'
+  when: ansible_distribution == 'Ubuntu'
 
 - include: install_osx.yml
   when: ansible_os_family == "Darwin"
