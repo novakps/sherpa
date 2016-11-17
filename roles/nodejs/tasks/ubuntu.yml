@@ -8,16 +8,17 @@
 
 - name: Add Nodesource Apt Sources List Deb
   apt_repository:
-    repo='deb https://deb.nodesource.com/node {{ ansible_distribution_release }} main'
+    repo='deb https://deb.nodesource.com/node_5.x {{ ansible_distribution_release }} main'
     state=present
   become: true
 
 - name: Add Nodesource Apt Sources List Deb Src
   apt_repository:
-    repo='deb-src https://deb.nodesource.com/node {{ ansible_distribution_release }} main'
+    repo='deb-src https://deb.nodesource.com/node_5.x {{ ansible_distribution_release }} main'
     state=present
   become: true
 
-  # TODO pin this version?
 - name: Install nodejs with apt
   apt: name=nodejs state=latest
+  update_cache: yes
+  become: true
