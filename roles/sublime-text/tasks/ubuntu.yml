@@ -9,5 +9,5 @@
     update_cache: yes
 
 - name: Install sublime-text with apt
-  apt: name=sublime-text3 state=latest
+  apt: name=sublime-text-installer state=latest
   become: true
