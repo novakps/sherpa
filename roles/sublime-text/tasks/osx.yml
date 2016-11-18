@@ -1,6 +1,6 @@
 ---
 
 - name: Install sublime-text with homebrew cask
-  homebrew_cask: name=sublime-text3 state=present
+  homebrew_cask: name=sublime-text state=present
   environment:
     HOMEBREW_CASK_OPTS: "--appdir=/Applications"
