@@ -4,5 +4,5 @@
   homebrew_cask: name=the-unarchiver state=present
   environment:
     HOMEBREW_CASK_OPTS: "--appdir=/Applications"
-  become: true
+
   when: ansible_os_family == 'Darwin'
