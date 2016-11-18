@@ -19,6 +19,5 @@
   become: true
 
 - name: Install nodejs with apt
-  apt: name=nodejs state=latest
-  update_cache: yes
+  apt: name=nodejs state=latest update_cache=true
   become: true
