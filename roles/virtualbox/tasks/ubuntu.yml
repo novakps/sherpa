@@ -10,9 +10,9 @@
   become: true
 
 - name: Install dkms
-  apt: name=dkms state=latest
+  apt: name=dkms state=latest update_cache=true
   become: true
 
 - name: Install virtualbox
-  apt: name=virtualbox-4.3
+  apt: name=virtualbox-4.3 state=latest update_cache=true
   become: true
