@@ -4,4 +4,4 @@
   homebrew: name=zsh state=latest
 
 - name: Set zsh as default shell
-  shell: dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+  shell: chsh -s /usr/local/bin/zsh
