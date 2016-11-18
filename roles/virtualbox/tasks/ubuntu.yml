@@ -9,10 +9,10 @@
   apt_repository: repo='deb http://download.virtualbox.org/virtualbox/debian trusty contrib' state=present
   become: true
 
-- name: Install dkms
+- name: Install dkms with apt
   apt: name=dkms state=latest update_cache=true
   become: true
 
-- name: Install virtualbox
+- name: Install virtualbox with apt
   apt: name=virtualbox-4.3 state=latest update_cache=true
   become: true

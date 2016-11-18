@@ -4,5 +4,5 @@
   homebrew_cask: name=emacs state=present
   environment:
     HOMEBREW_CASK_OPTS: "--appdir=/Applications"
-  become: true
+
   notify: Install emacs packages
