@@ -5,5 +5,4 @@
   homebrew_cask: name=reggy state=present
   environment:
     HOMEBREW_CASK_OPTS: "--appdir=/Applications"
-  become: true
   when: ansible_os_family == "Darwin"

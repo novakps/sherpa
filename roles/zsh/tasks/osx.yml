@@ -5,3 +5,4 @@
 
 - name: Set zsh as default shell
   user: name={{ ansible_user_id }} shell=/usr/local/bin/zsh
+  become: true
