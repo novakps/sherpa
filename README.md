@@ -55,5 +55,5 @@ git clone https://github.com/novakps/sherpa.git
 
 cd sherpa
 
-ansible-playbook site.yml
+ansible-playbook -K site.yml
 ```
