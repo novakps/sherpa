@@ -1,16 +1,18 @@
 ---
 
+
+- name: Tap homebrew cask versions
+  homebrew_tap: tap=caskroom/versions state=present
+
 - name: Install java6 with homebrew cask
   homebrew_cask: name=java6 state=present
   environment:
     HOMEBREW_CASK_OPTS: "--appdir=/Applications"
 
-
 - name: Install java7 with homebrew cask
   homebrew_cask: name=java7 state=present
   environment:
     HOMEBREW_CASK_OPTS: "--appdir=/Applications"
-
 
 - name: Install java8 with homebrew cask
   homebrew_cask: name=java state=present
