@@ -4,4 +4,4 @@
   homebrew: name=zsh state=latest
 
 - name: Set zsh as default shell
-  shell: chsh -s /usr/local/bin/zsh
+  user: name={{ ansible_user_id }} shell=/usr/local/bin/zsh
