@@ -16,8 +16,9 @@
   apt_repository:
     repo='deb-src https://deb.nodesource.com/node_5.x {{ ansible_distribution_release }} main'
     state=present
+    update_cache=true
   become: true
 
 - name: Install nodejs with apt
-  apt: name=nodejs state=latest update_cache=true
+  apt: name=nodejs state=latest
   become: true
