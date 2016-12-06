@@ -30,6 +30,7 @@
      - nginx
      - p7zip
      - sshd
+     - surfraw
      - tern
      - tmux
      - vagrant

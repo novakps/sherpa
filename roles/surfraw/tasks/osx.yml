@@ -1,0 +1,4 @@
+---
+
+- name: Install surfraw with homebrew
+  homebrew: name=surfraw state=latest
