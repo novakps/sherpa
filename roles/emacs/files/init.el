@@ -70,7 +70,7 @@ See URL `https://github.com/mdevils/node-jscs'."
 
 ;; Prettier
 (let ((prettier-js "~/.emacs.d/prettier/editors/emacs"))
-  (add-to-liest 'load-path prettier-js)
+  (add-to-list 'load-path prettier-js)
   (require 'prettier-js)
   (add-hook 'js-mode-hook
             (lambda ()
