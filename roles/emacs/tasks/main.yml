@@ -19,6 +19,13 @@
     dest=~/.emacs.d/closure-snippets
     force=yes
 
+- name: Clone prettier
+  git: >-
+    repo=https://github.com/jlongster/prettier.git
+    accept_hostkey=yes
+    dest=~/.emacs.d/prettier
+    force=yes
+
 - include: ubuntu.yml
   when: ansible_distribution == 'Ubuntu'
 

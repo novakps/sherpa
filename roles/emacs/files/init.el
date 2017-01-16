@@ -68,6 +68,14 @@ See URL `https://github.com/mdevils/node-jscs'."
     (yas/load-directory closure-snippets))
 (setq yas/prompt-functions '(yas/ido-prompt yas/dropdown-prompt yas/completing-prompt yas/x-prompt yas/no-prompt))
 
+;; Prettier
+(let ((prettier-js "~/.emacs.d/prettier/editors/emacs"))
+  (add-to-liest 'load-path prettier-js)
+  (require 'prettier-js)
+  (add-hook 'js-mode-hook
+            (lambda ()
+              (add-hook 'before-save-hook 'prettier-before-save))))
+
 ;; js2-mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
