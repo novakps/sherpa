@@ -1,0 +1,5 @@
+---
+
+- name: Install n with apt
+  apt: name=n state=latest
+  become: true

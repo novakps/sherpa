@@ -1,0 +1,4 @@
+---
+
+- name: Install n with homebrew
+  homebrew: name=n state=latest
