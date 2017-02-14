@@ -2,11 +2,15 @@
 
  - name: Packages for workstations
    hosts: all
+   vars:
+     homebrew_installed_packages: []
+     homebrew_cask_apps: []
+
    roles:
 
      # text editors and ides
      - intellij-idea
-     - sublime-text
+     # - sublime-text
      - vim
      - emacs
      - atom
@@ -45,28 +49,28 @@
      - mongodb
 
      # browsers
-     - firefox
-     - google-chrome
+     # - firefox
+     # - google-chrome
 
      # applications
-     - evernote
+     # - evernote
      - gimp
      - google-drive
      - hipchat
-     - skype
-     - vlc
+     # - skype
+     # - vlc
 
      # osx
      - alfred
      - amethyst
      - calibre
-     - cord
+     # - cord
      - osx-customizations
      - reggy
      - services
      - skitch
-     - sourcetree
-     - the-unarchiver
+     # - sourcetree
+     # - the-unarchiver
 
      # ubuntu
      - i3
