@@ -31,6 +31,7 @@
      - grunt-cli
      - js-beautify
      - maven
+     - n
      - nginx
      - p7zip
      - sshd
