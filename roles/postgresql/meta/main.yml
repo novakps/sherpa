@@ -3,6 +3,6 @@
 dependencies:
   - { role: 'geerlingguy.homebrew', when: ansible_os_family == 'Darwin' }
   - { role: 'apt', when: ansible_distribution == 'Ubuntu' }
-  - { role: 'python-psycopg2' }
+#  - { role: 'python-psycopg2' }
   - { role: 'pycurl' }
   - { role: 'services', when: ansible_os_family == 'Darwin' }

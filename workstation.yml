@@ -42,11 +42,12 @@
      - virtualbox
      - virtualenv
      - wget
+     - yarn
      - zsh
      - zsh-completions
 
      # databases
-     #- postgresql
+     - postgresql
      - mongodb
 
      # browsers
