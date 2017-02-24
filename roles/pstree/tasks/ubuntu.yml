@@ -1,0 +1,5 @@
+---
+
+- name: Install pstree with apt
+  apt: name=pstree state=latest
+  become: true

@@ -1,0 +1,4 @@
+---
+
+- name: Install pstree with homebrew
+  homebrew: name=pstree state=latest
