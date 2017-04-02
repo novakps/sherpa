@@ -17,3 +17,9 @@
     src: gitignore_global
     dest: ~/.gitignore_global
     backup: yes
+
+- name: global git commit message template
+  template:
+    src: gitmessage.j2
+    dest: ~/.gitmessage
+    backup: yes

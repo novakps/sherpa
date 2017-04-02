@@ -7,6 +7,9 @@
 [color]
   ui = true
 
+[commit]
+  template = ~/.gitmessage
+
 [core]
   editor = {{ git_coreeditor|default('vi') }}
   excludesfile = {{ ansible_env.HOME }}/.gitignore_global

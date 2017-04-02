@@ -19,7 +19,6 @@
 - name: Install java7 with apt
   apt: name=oracle-java7-installer
   become: true
-  become: true
 
 - name: Install java8 with apt
   apt: name=oracle-java8-installer
