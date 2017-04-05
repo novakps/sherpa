@@ -52,7 +52,7 @@
      - mongodb
 
      # browsers
-     # - firefox
+     - firefox
      # - google-chrome
      - opera
 
