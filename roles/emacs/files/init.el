@@ -9,6 +9,7 @@
                             tern-auto-complete
                             web-beautify
                             yasnippet
+                            multi-term
                             ))
 
 (require 'server)
@@ -122,3 +123,11 @@ See URL `https://github.com/mdevils/node-jscs'."
 
 ;; cleanup whitespace on save
 (add-hook 'before-save-hook 'whitespace-cleanup)
+
+;; zsh in multi-term
+(setq multi-term-program "/usr/local/bin/zsh")
+
+
+
+;; Use Emacs terminfo, not system terminfo
+(setq system-uses-terminfo nil)
