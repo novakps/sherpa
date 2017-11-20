@@ -54,7 +54,7 @@
      # browsers
      - firefox
      # - google-chrome
-     - opera
+     # - opera
 
      # applications
      # - evernote
