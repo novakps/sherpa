@@ -1,5 +1,5 @@
 ---
 
-- name: Install n with apt
-  apt: name=n state=latest
-  become: true
+- name: Install n with npm
+  npm: name=n global=yes state=present
+  become: yes
