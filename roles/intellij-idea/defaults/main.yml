@@ -1,6 +1,6 @@
 # Edition to install (community or ultimate)
 intellij_edition: ultimate
-intellij_version: 2017.2.6
+intellij_version: 2017.3
 intellij_tmp: /tmp/ideaIU-{{intellij_version}}.tar.gz
 
 # Base installation directory for any IntelliJ IDEA distribution
