@@ -1,7 +1,6 @@
 # Edition to install (community or ultimate)
 intellij_edition: ultimate
-intellij_version: 2017.2.6
-
+intellij_version: 2017.3
 # Base installation directory for any IntelliJ IDEA distribution
 intellij_install_dir: /opt/idea/idea-{{ intellij_edition }}-{{ intellij_version }}
 
