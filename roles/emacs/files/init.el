@@ -5,6 +5,7 @@
                             js3-mode
                             flymake-jshint
                             jss
+                            restclient
                             tern
                             tern-auto-complete
                             web-beautify
