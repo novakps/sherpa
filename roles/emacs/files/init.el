@@ -5,6 +5,7 @@
                             js3-mode
                             flymake-jshint
                             jss
+                            prettier-js
                             restclient
                             tern
                             tern-auto-complete
@@ -93,6 +94,9 @@ See URL `https://github.com/mdevils/node-jscs'."
 (add-hook 'js2-mode-hook 'tern-mode)
 (add-hook 'js-mode-hook 'tern-mode)
 
+;; jsx-mode
+(add-to-list 'auto-mode-alist '("\\.jsx" . js2-jsx-mode))
+
 ;; keybindings
 ;; Invoke M-x without alt key
 (global-set-key "\C-x\C-m" 'execute-extended-command)
@@ -127,8 +131,6 @@ See URL `https://github.com/mdevils/node-jscs'."
 
 ;; zsh in multi-term
 (setq multi-term-program "/usr/local/bin/zsh")
-
-
 
 ;; Use Emacs terminfo, not system terminfo
 (setq system-uses-terminfo nil)
