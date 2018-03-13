@@ -5,6 +5,8 @@
                             js3-mode
                             flymake-jshint
                             jss
+                            moe-theme
+                            powerline
                             prettier-js
                             restclient
                             tern
@@ -134,3 +136,8 @@ See URL `https://github.com/mdevils/node-jscs'."
 
 ;; Use Emacs terminfo, not system terminfo
 (setq system-uses-terminfo nil)
+
+;; powerline moe-theme
+(moe-theme-set-color 'magenta)
+(moe-dark)
+(powerline-moe-theme)
