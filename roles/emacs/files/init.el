@@ -138,6 +138,7 @@ See URL `https://github.com/mdevils/node-jscs'."
 (setq system-uses-terminfo nil)
 
 ;; powerline moe-theme
-(moe-theme-set-color 'magenta)
-(moe-dark)
+(require 'powerline)
+(require 'moe-theme)
 (powerline-moe-theme)
+(moe-dark)
