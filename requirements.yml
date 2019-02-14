@@ -1,3 +1,2 @@
 ---
-- src: https://github.com/novakps/ansible-role-homebrew
-  name: geerlingguy.homebrew
+-  name: geerlingguy.homebrew

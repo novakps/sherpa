@@ -55,5 +55,7 @@ git clone https://github.com/novakps/sherpa.git
 
 cd sherpa
 
+ansible-galaxy install -r requirements.yml
+
 ansible-playbook -K site.yml
 ```
