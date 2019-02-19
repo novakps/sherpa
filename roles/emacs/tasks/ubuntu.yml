@@ -1,13 +1,5 @@
 ---
 
-- name: Add ppa for emacs 25
-  apt_repository:
-  args:
-    state: present
-    repo: "ppa:adrozdoff/emacs"
-    update_cache: true
-  become: true
-
 - name: Install emacs with apt
   apt: name=emacs25 state=latest
   become: true

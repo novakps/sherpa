@@ -9,15 +9,16 @@
    roles:
 
      # text editors and ides
-     - intellij-idea
+     # - intellij-idea
      # - sublime-text
      - vim
      - emacs
-     - atom
+     # - atom
 
      # languages
      - java
      - nodejs
+     - geerlingguy.nodejs
      - python
 
      # development tools and utils
@@ -29,7 +30,6 @@
      - gawk
      - git
      - grunt-cli
-     - js-beautify
      - maven
      - n
      - nginx
