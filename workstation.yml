@@ -9,7 +9,7 @@
    roles:
 
      # text editors and ides
-     # - intellij-idea
+     - intellij-idea
      # - sublime-text
      - vim
      - emacs
@@ -18,17 +18,18 @@
      # languages
      - java
      - nodejs
-     - geerlingguy.nodejs
+     # only used for ubuntu     - geerlingguy.nodejs
      - python
 
      # development tools and utils
      - ack
      - ag
      - ant
-     - closure-linter
+# is this needed?     - closure-linter
      - coreutils
      - gawk
      - git
+     - gitkraken
      - grunt-cli
      - maven
      - n
@@ -48,32 +49,36 @@
      - zsh-completions
 
      # databases
-     - postgresql
+#     - postgresql
+     - postgresql10
+     - pgadmin4
      - mongodb
 
      # browsers
-     - firefox
+     # - firefox
      # - google-chrome
      # - opera
 
      # applications
      # - evernote
      - gimp
-     - google-drive
-     - hipchat
+     #     - google-drive
+     - google-chat
+     # - hipchat
      # - skype
      # - vlc
 
      # osx
-     - alfred
+     # - alfred
      - amethyst
-     - calibre
+     # - calibre
      # - cord
+     - iterm2
      - osx-customizations
      - reggy
      - services
      - skitch
-     # - sourcetree
+     - sourcetree
      # - the-unarchiver
 
      # ubuntu

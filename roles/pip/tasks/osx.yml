@@ -1,5 +1,0 @@
----
-
-- name: Install pip with easy_install
-  easy_install: name=pip state=latest
-  become: true

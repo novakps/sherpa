@@ -1,0 +1,6 @@
+---
+
+- name: Install google-chat with homebrew cask
+  homebrew_cask: name=google-chat state=latest
+  environment:
+    HOMEBREW_CASK_OPTS: "--appdir=/Applications"

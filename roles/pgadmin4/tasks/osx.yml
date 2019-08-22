@@ -1,0 +1,6 @@
+---
+
+- name: Install pgadmin4  with homebrew cask
+  homebrew_cask: name=pgadmin4 state=latest
+  environment:
+    HOMEBREW_CASK_OPTS: "--appdir=/Applications"

@@ -1,0 +1,4 @@
+---
+
+- name: Install postgresql10 with homebrew
+  homebrew: name=postgresql@10 state=latest

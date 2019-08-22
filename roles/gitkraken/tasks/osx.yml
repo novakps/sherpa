@@ -1,0 +1,6 @@
+---
+
+- name: Install gitkraken with homebrew cask
+  homebrew_cask: name=gitkraken state=latest
+  environment:
+    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
