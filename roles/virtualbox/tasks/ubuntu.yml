@@ -9,7 +9,7 @@
 
 - name: add VirtualBox repo
   apt_repository:
-    repo: "deb http://download.virtualbox.org/virtualbox/debian xenial contrib"
+    repo: deb http://download.virtualbox.org/virtualbox/debian bionic contrib
     state: present
     update_cache: true
   become: true

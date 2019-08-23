@@ -1,6 +1,5 @@
 ---
 
-
 - name: Add ppa
   apt_repository:
   become: true

@@ -1,6 +1,14 @@
 ---
 
-- name: Install emacs with apt
-  apt: name=emacs25 state=latest
+- name: Add ppa
+  apt_repository:
+  become: true
+  args:
+    state: present
+    repo: 'ppa:kelleyk/emacs'
+    update_cache: yes
+
+- name: Install emacs26 with apt
+  apt: name=emacs26 state=absent
   become: true
   notify: Install emacs packages

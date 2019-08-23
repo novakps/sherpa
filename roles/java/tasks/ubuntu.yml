@@ -1,21 +1,9 @@
 ---
 
-- name: Add ppa
-  apt_repository:
-  become: true
-  args:
-    state: present
-    repo: "ppa:linuxuprising/java"
-    update_cache: yes
-
-- name: Accept Oracle license
-  debconf: name=Oracle-java8-installer question='shared/accepted-oracle-license-v1-1' value='true' vtype='select'
-  become: true
-
 - name: Install java8 with apt
-  apt: name=oracle-java8-installer
+  apt: name=openjdk-8-jdk
   become: true
 
 - name: Install java11 with apt
-  apt: name=oracle-java11-installer
+  apt: name=openjdk-11-jdk
   become: true

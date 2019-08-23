@@ -18,7 +18,6 @@
      # languages
      - java
      - nodejs
-     # only used for ubuntu     - geerlingguy.nodejs
      - python
 
      # development tools and utils
@@ -41,7 +40,7 @@
      - tern
      - tmux
      - vagrant
-     - virtualbox
+     #- virtualbox
      - virtualenv
      - wget
      - yarn
