@@ -22,9 +22,7 @@ softwareupdate --install --all
 
 ```
 
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-
-python get-pip.py --user
+sudo easy_install pip
 
 sudo pip install --ignore-installed ansible
 
