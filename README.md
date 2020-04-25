@@ -56,4 +56,32 @@ cd sherpa
 ansible-galaxy install -r requirements.yml
 
 ansible-playbook -K site.yml
+
+## Notes
+
+### MacOSX
+
+Virtualbox fails to install at the moment due to:
+```
+✗ brew info virtualbox
+Error: No available formula with the name "virtualbox"
+Found a cask named "virtualbox" instead.
+
+virtualbox: 6.1.6,137129
+https://www.virtualbox.org/
+/usr/local/Caskroom/virtualbox/6.1.6,137129 (3 files, 117.6MB)
+From: https://github.com/Homebrew/homebrew-cask/blob/master/Casks/virtualbox.rb
+==> Name
+Oracle VirtualBox
+==> Artifacts
+VirtualBox.pkg (Pkg)
+==> Caveats
+virtualbox requires a kernel extension to work.
+If the installation fails, retry after you enable it in:
+  System Preferences → Security & Privacy → General
+
+For more information, refer to vendor documentation or this Apple Technical Note:
+  https://developer.apple.com/library/content/technotes/tn2459/_index.html
+```
+After enabling it, just rerun sherpa.
 ```

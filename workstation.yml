@@ -40,7 +40,7 @@
      - tern
      - tmux
      # - vagrant
-     # - virtualbox
+     - virtualbox
      - virtualenv
      - wget
      - yarn
