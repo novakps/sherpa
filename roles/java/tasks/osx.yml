@@ -1,10 +1,30 @@
 ---
 
+- name: Tap AdoptOpenJDK
+  homebrew_tap: tap=AdoptOpenJDK/openjdk
 
-- name: Tap homebrew cask versions
-  homebrew_tap: tap=caskroom/versions state=present
+- name: Install AdoptOpenJDK 11 with homebrew tap
+  homebrew_cask: name=adoptopenjdk11 state=latest
 
-- name: Install java11 with homebrew cask
-  homebrew_cask: name=java11 state=present
-  environment:
-    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
+- name: Install AdoptOpenJDK 8 with homebrew tap
+  homebrew_cask: name=adoptopenjdk8 state=latest
+
+- name: Get jdk11 home
+  shell: /usr/libexec/java_home -v 11
+  register: jdk_11_home_full
+
+- set_fact:
+    jdk_11_home={{ jdk_11_home_full.stdout }}
+
+- name: Get jdk8 home
+  shell: /usr/libexec/java_home -v 1.8
+  register: jdk_8_home_full
+
+- set_fact:
+    jdk_8_home={{ jdk_8_home_full.stdout }}
+
+- name: Maven toolchains config
+  template:
+    src: toolchains.j2
+    dest: ~/.m2/toolchains.xml
+    backup: yes

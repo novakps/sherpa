@@ -2,5 +2,7 @@
 
 - name: Install virtualbox with homebrew cask
   homebrew_cask: name=virtualbox state=present
-  environment:
-    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
+
+
+- name: Install virtualbox extension-pack with homebrew cask
+  homebrew_cask: name=virtualbox-extension-pack state=present

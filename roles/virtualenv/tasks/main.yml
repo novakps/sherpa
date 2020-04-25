@@ -1,4 +1,4 @@
 ---
   - name: install virtualenv
-    pip: name=virtualenv state=latest
+    pip: name=virtualenv state=latest executable=pip3.7
     become: true

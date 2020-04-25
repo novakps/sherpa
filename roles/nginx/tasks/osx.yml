@@ -2,3 +2,6 @@
 
 - name: Install nginx with homebrew
   homebrew: name=nginx state=latest
+
+- name: Ensure nginx service is started at login
+  command: brew services start nginx

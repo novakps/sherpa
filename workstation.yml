@@ -11,13 +11,13 @@
      # text editors and ides
      - intellij-idea
      # - sublime-text
-     - vim
+     # - vim
      - emacs
      # - atom
 
      # languages
      - java
-     - nodejs
+     # - nodejs
      - python
 
      # development tools and utils
@@ -28,19 +28,19 @@
      - coreutils
      - gawk
      - git
-     - gitkraken
-     - grunt-cli
+     # - gitkraken
+     # - grunt-cli
      - maven
      - n
      - nginx
      - p7zip
      - pstree
      - sshd
-     - surfraw
+     # - surfraw
      - tern
      - tmux
-     - vagrant
-     #- virtualbox
+     # - vagrant
+     # - virtualbox
      - virtualenv
      - wget
      - yarn
@@ -48,37 +48,28 @@
      - zsh-completions
 
      # databases
-#     - postgresql
      - postgresql10
      - pgadmin4
-     - mongodb
+#     - mongodb
 
      # browsers
-     # - firefox
-     # - google-chrome
      # - opera
 
      # applications
      # - evernote
-     - gimp
-     #     - google-drive
-     - google-chat
-     # - hipchat
-     # - skype
-     # - vlc
+     # - gimp
+     # - google-drive
+     # - google-chat
+     - skype
+     - vlc
 
      # osx
-     # - alfred
      - amethyst
-     # - calibre
-     # - cord
      - iterm2
-     - osx-customizations
-     - reggy
-     - services
+     # - osx-customizations
      - skitch
      - sourcetree
-     # - the-unarchiver
+     - the-unarchiver
 
      # ubuntu
      - i3

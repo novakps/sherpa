@@ -3,4 +3,7 @@
 - include: ubuntu.yml
   when: ansible_distribution == 'Ubuntu'
 
-# TODO different path for osx
+# expect sshd already installed on macox
+
+- openssh_keypair:
+    path: ~/.ssh/id_rsa

@@ -16,3 +16,9 @@
 
 [push]
   default = {{ git_pushdefault|default('current')  }}
+
+[branch]
+  autosetuprebase = always
+
+[branch "master"]
+  rebase = true

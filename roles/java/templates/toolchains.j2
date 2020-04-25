@@ -1,0 +1,33 @@
+<!-- {{ ansible_managed }} -->
+<toolchains>
+    <toolchain>
+        <type>jdk</type>
+        <provides>
+            <version>11</version>
+            <vendor>adopt-hotspot</vendor>
+        </provides>
+        <configuration>
+            <jdkHome>{{ jdk_11_home }}</jdkHome>
+        </configuration>
+    </toolchain>
+    <toolchain>
+        <type>jdk</type>
+        <provides>
+            <version>11</version>
+            <vendor>openjdk</vendor>
+        </provides>
+        <configuration>
+            <jdkHome>{{ jdk_11_home }}</jdkHome>
+        </configuration>
+    </toolchain>
+    <toolchain>
+        <type>jdk</type>
+        <provides>
+            <version>1.8</version>
+            <vendor>oracle</vendor>
+        </provides>
+        <configuration>
+            <jdkHome>{{ jdk_8_home }}</jdkHome>
+        </configuration>
+    </toolchain>
+</toolchains>

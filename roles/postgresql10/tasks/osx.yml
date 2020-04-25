@@ -1,4 +1,7 @@
 ---
 
-- name: Install postgresql10 with homebrew
+- name: Install postgresql@10 with homebrew
   homebrew: name=postgresql@10 state=latest
+
+- name: Ensure postgresql@10 service is started at login.
+  command: brew services start postgresql@10
