@@ -5,5 +5,10 @@
 
 # expect sshd already installed on macox
 
+- name: Ensure ~./sshd directory exists
+  file:
+    path: ~/.ssh
+    state: directory
+
 - openssh_keypair:
     path: ~/.ssh/id_rsa
