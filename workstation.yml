@@ -7,49 +7,50 @@
      homebrew_cask_apps: []
 
    roles:
-
+     - role: geerlingguy.postgresql
+       become: yes
      # text editors and ides
-     - intellij-idea
+     # - intellij-idea
      # - sublime-text
      # - vim
-     - emacs
+     # - emacs
      # - atom
 
      # languages
-     - java
+     # - java
      # - nodejs
-     - python
+     # - python
 
      # development tools and utils
-     - ack
-     - ag
-     - ant
+     # - ack
+     # - ag
+     # - ant
 # is this needed?     - closure-linter
-     - coreutils
-     - gawk
-     - git
+     # - coreutils
+     # - gawk
+     # - git
      # - gitkraken
      # - grunt-cli
-     - maven
-     - n
-     - nginx
-     - p7zip
-     - pstree
-     - sshd
+     # - maven
+     # - n
+     # - nginx
+     # - p7zip
+     # - pstree
+     # - sshd
      # - surfraw
-     - tern
-     - tmux
+     # - tern
+     # - tmux
      # - vagrant
-     - virtualbox
-     - virtualenv
-     - wget
-     - yarn
-     - zsh
-     - zsh-completions
+     # - virtualbox
+     # - virtualenv
+     # - wget
+     # - yarn
+     # - zsh
+     # - zsh-completions
 
      # databases
-     - postgresql10
-     - pgadmin4
+     # - postgresql10
+     # - pgadmin4
 #     - mongodb
 
      # browsers
@@ -60,16 +61,16 @@
      # - gimp
      # - google-drive
      # - google-chat
-     - skype
-     - vlc
+     # - skype
+     # - vlc
 
      # osx
-     - amethyst
-     - iterm2
+     # - amethyst
+     # - iterm2
      # - osx-customizations
-     - skitch
-     - sourcetree
-     - the-unarchiver
+     # - skitch
+     # - sourcetree
+     # - the-unarchiver
 
      # ubuntu
      - i3

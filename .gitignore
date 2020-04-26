@@ -1,3 +1,4 @@
 roles/elliotweiser.osx-command-line-tools
 roles/geerlingguy.homebrew
 geerlingguy.nodejs
+roles/geerlingguy.postgresql
