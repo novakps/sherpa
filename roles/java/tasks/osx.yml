@@ -23,6 +23,11 @@
 - set_fact:
     jdk_8_home={{ jdk_8_home_full.stdout }}
 
+- name: Ensure ~./m2 directory exists
+  file:
+    path: ~/.m2
+    state: directory
+
 - name: Maven toolchains config
   template:
     src: toolchains.j2
