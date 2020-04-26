@@ -56,7 +56,7 @@ cd sherpa
 ansible-galaxy install -r requirements.yml
 
 ansible-playbook -K site.yml
-
+```
 ## Notes
 
 ### MacOSX
@@ -84,4 +84,3 @@ For more information, refer to vendor documentation or this Apple Technical Note
   https://developer.apple.com/library/content/technotes/tn2459/_index.html
 ```
 After enabling it, just rerun sherpa.
-```
