@@ -6,6 +6,10 @@
      homebrew_installed_packages: []
      homebrew_cask_apps:
        - amethyst
+       - iterm2
+       - skitch
+       - sourcetree
+       - the-unarchiver
 
    roles:
      - role: geerlingguy.postgresql
@@ -66,12 +70,7 @@
      # - vlc
 
      # osx
-     # - amethyst
-     - iterm2
      # - osx-customizations
-     # - skitch
-     # - sourcetree
-     # - the-unarchiver
 
      # ubuntu
      - i3

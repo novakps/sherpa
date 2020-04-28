@@ -1,5 +1,0 @@
----
-
-dependencies:
-  - { role: 'geerlingguy.homebrew', when: ansible_os_family == 'Darwin' }
-  - { role: 'apt', when: ansible_distribution == 'Ubuntu' }

@@ -1,8 +1,0 @@
----
-
-# TODO Investigate GitKraken for linux (and osx)?
-- name: Install sourcetree with homebrew cask
-  homebrew_cask: name=sourcetree state=latest
-  environment:
-    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
-  when: ansible_os_family == "Darwin"

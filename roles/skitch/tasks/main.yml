@@ -1,8 +1,0 @@
----
-
-# TODO consider adding hotshots role for linux?
-- name: Install skitch with homebrew cask
-  homebrew_cask: name=skitch state=present
-  environment:
-    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
-  when: ansible_os_family == "Darwin"

@@ -1,8 +1,0 @@
----
-
-- name: Install the-unarchiver with homebrew cask
-  homebrew_cask: name=the-unarchiver state=present
-  environment:
-    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
-
-  when: ansible_os_family == 'Darwin'

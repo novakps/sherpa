@@ -1,6 +1,0 @@
----
-
-- name: Install iterm2 with homebrew cask.
-  homebrew_cask: name=iterm2 state=latest
-  environment:
-    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
