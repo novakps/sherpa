@@ -87,7 +87,7 @@
      # both
      pip_install_packages:
        #- closure-linter
-       - psycopg2
+       # - psycopg2
        - virtualenv
      pip_package: python3
      pip_executable: pip3.7
