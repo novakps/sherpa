@@ -1,5 +1,0 @@
----
-
-- name: Install surfraw with apt
-  apt: name=surfraw state=latest
-  become: true

@@ -1,6 +1,0 @@
----
-
-- name: Install google-chrome with homebrew cask
-  homebrew_cask: name=google-chrome state=present
-  environment:
-    HOMEBREW_CASK_OPTS: "--appdir=/Applications"

@@ -1,5 +1,0 @@
----
-
-- name: Install skype with apt
-  apt: name=skype state=latest
-  become: true

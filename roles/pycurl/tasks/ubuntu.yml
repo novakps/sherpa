@@ -1,5 +1,0 @@
----
-
-- name: Install pycurl with apt
-  apt: name=python-pycurl
-  become: true

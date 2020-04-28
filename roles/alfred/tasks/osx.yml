@@ -1,6 +1,0 @@
----
-
-- name: Install alfred with homebrew cask
-  homebrew_cask: name=alfred state=present
-  environment:
-    HOMEBREW_CASK_OPTS: "--appdir=/Applications"

@@ -1,5 +1,0 @@
----
-
-- name: Install vagrant with apt
-  apt: name=vagrant state=latest
-  become: true

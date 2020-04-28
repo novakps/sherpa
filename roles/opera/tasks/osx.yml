@@ -1,6 +1,0 @@
----
-
-- name: Install opera with homebrew cask
-  homebrew_cask: name=opera state=present
-  environment:
-    HOMEBREW_CASK_OPTS: "--appdir=/Applications"

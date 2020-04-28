@@ -1,5 +1,0 @@
----
-# TODO: pin version?
-
-- name: Install nodejs with homebrew
-  homebrew: name=nodejs state=latest

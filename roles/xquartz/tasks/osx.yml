@@ -1,6 +1,0 @@
----
-
-- name: Install xquartz with homebrew cask
-  homebrew_cask: name=xquartz state=present
-  environment:
-    HOMEBREW_CASK_OPTS: "--appdir=/Applications"

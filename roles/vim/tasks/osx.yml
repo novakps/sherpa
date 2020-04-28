@@ -1,4 +1,0 @@
----
-
-- name: Install vim with homebrew
-  homebrew: name=vim state=latest

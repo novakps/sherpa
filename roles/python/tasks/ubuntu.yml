@@ -1,5 +1,0 @@
----
-
-- name: Install python with apt
-  apt: name=python state=latest
-  become: true

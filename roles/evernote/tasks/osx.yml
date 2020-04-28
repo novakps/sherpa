@@ -1,6 +1,0 @@
----
-
-- name: Install evernote with homebrew cask
-  homebrew_cask: name=evernote state=present
-  environment:
-    HOMEBREW_CASK_OPTS: "--appdir=/Applications"

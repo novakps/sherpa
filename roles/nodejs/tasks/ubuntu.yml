@@ -1,9 +1,0 @@
----
-
-- name: Install nodejs with apt
-  apt: name=nodejs state=latest
-  become: true
-
-- name: Installl npm with apt
-  apt: name=npm state=latest
-  become: true

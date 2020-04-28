@@ -1,4 +1,0 @@
----
-
-- name: Install psycopg2 with apt
-  apt: name=python-psycopg2

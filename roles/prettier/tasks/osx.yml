@@ -1,4 +1,0 @@
----
-
-- name: Install prettier with npm
-  npm: name=prettier global=yes state=latest

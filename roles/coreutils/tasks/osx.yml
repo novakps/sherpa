@@ -1,4 +1,0 @@
----
-
-- name: Install coreutils with homebrew
-  homebrew: name=coreutils state=latest

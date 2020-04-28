@@ -1,6 +1,0 @@
----
-
-- name: Install cord with homebrew cask.
-  homebrew_cask: name=cord state=present
-  environment:
-    HOMEBREW_CASK_OPTS: "--appdir=/Applications"

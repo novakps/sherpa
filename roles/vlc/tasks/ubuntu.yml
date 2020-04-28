@@ -1,5 +1,0 @@
----
-
-- name: Install vlc with apt
-  apt: name=vlc state=latest
-  become: true

@@ -1,8 +1,0 @@
----
-
-# TODO find a similar tool for linux?
-- name: Install reggy with homebrew cask
-  homebrew_cask: name=reggy state=present
-  environment:
-    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
-  when: ansible_os_family == "Darwin"

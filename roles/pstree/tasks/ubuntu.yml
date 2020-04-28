@@ -1,5 +1,0 @@
----
-
-- name: Install pstree with apt
-  apt: name=psmisc state=latest
-  become: true

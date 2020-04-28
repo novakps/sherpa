@@ -1,6 +1,0 @@
-- name: ensure superuser
-  postgresql_user: 
-    name: postgres
-    password: user 
-    port: 3247
-    role_attr_flags: SUPERUSER

@@ -1,4 +1,0 @@
----
-
-- name: Install mongodb with homebrew
-  homebrew: name=mongodb state=latest

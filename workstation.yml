@@ -3,78 +3,102 @@
  - name: Packages for workstations
    hosts: all
    vars:
+     # MacOSX
      homebrew_installed_packages:
+       - ack
        - ag
+       - ant
+       - coreutils
+       - gawk
+       - maven
+       - nodejs
+       # - mongodb
+       - p7zip
+       - pstree
+       - python
+       - python3
+       - surfraw
+       - tmux
+       # - vim
+       - wget
+       - yarn
+       - zsh-completions
      homebrew_cask_apps:
+       # - alfred
        - amethyst
+       # - atom
+       # - evernote
+       # - firefox
+       # - gimp
+       # - gitkraken
+       # - google-chat
+       # - google-chrome ## assume installed already
+       # - google-drive
        - iterm2
+       - pgadmin4
+       - opera
        - skitch
+       - skype
        - sourcetree
+       # - sublime-text
        - the-unarchiver
+       # - vagrant
+       - virtualbox
+       - virtualbox-extension-pack
+       - vlc
+       - xquartz
+     # Ubuntu
      apt_installed_packages:
+       - ack
+       - ant
+       # - chromium-browser
+       - coreutils
+       - firefox
+       - gawk
+       - i3
+       - maven
+       # - mongodb
+       - nodejs
+       # - npm ##?
+       - opera
+       - p7zip-full
+       # - pgadmin4 ## needs ppa
+       - psmisc
+       - python
+       - python-psycopg2
+       - rdesktop
        - silversearcher-ag
+       - skype
+       # - sublime-text  ## needs ppa
+       - surfraw
+       - tmux
+       # - vagrant
+       # - vim
+       #- virtualbox ## ppa needed
+       - vlc
+       - wget
+       - yarn
+     # both
+     npm_installed_packages:
+       # - grunt-cli
+       - n
+       # - prettier
+       - tern@0.13.0
+     # both
+     pip_installed_packages:
+       #- closure-linter
+       - psycopg2
+       - virtualenv
 
    roles:
      - role: geerlingguy.postgresql
        become: yes
-     # text editors and ides
-     # - intellij-idea
-     # - sublime-text
-     # - vim
-     # - emacs
-     # - atom
-
-     # languages
-     # - java
-     # - nodejs
-     # - python
-
-     # development tools and utils
-     # - ack
-     # - ag
-     # - ant
-# is this needed?     - closure-linter
-     # - coreutils
-     # - gawk
-     # - git
-     # - gitkraken
-     # - grunt-cli
-     # - maven
-     # - n
-     # - nginx
-     # - p7zip
-     # - pstree
-     # - sshd
-     # - surfraw
-     # - tern
-     # - tmux
-     # - vagrant
-     # - virtualbox
-     # - virtualenv
-     # - wget
-     # - yarn
-     # - zsh
-     # - zsh-completions
-
-     # databases
-     # - postgresql10
-     # - pgadmin4
-#     - mongodb
-
-     # browsers
-     # - opera
-
-     # applications
-     # - evernote
-     # - gimp
-     # - google-drive
-     # - google-chat
-     # - skype
-     # - vlc
-
-     # osx
+     - git
+     - intellij-idea
+     - emacs
+     - java
+     - nginx
+     - sshd
+     - zsh
+     - zsh-completions
      # - osx-customizations
-
-     # ubuntu
-     - i3
-     - rdesktop

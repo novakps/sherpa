@@ -1,5 +1,0 @@
----
-
-- name: Install gawk with apt
-  apt: name=gawk
-  become: true

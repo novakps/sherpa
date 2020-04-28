@@ -1,9 +1,0 @@
----
-
- - name: Install tern with npm
-   npm: name=tern@0.13.0 global=yes state=present
-   when: ansible_os_family == 'Darwin'
-
- - name: Install tern-closure with npm
-   npm: name=google/tern-closure global=yes state=present
-   when: ansible_os_family == 'Darwin'

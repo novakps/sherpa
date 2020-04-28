@@ -1,5 +1,0 @@
----
-
-- name: Install yarn with npm
-  npm: name=yarn global=yes state=present
-  become: yes

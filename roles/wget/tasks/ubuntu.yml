@@ -1,5 +1,0 @@
----
-
-- name: Install wget with apt
-  apt: name=wget state=latest
-  become: true

@@ -1,4 +1,0 @@
----
-  - name: install virtualenvwrapper
-    pip: name=virtualenvwrapper state=latest
-    become: true

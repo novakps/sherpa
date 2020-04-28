@@ -1,4 +1,0 @@
----
-
-- name: Install zsh-completions with homebrew
-  homebrew: name=zsh-completions state=latest

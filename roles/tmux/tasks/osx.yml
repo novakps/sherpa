@@ -1,4 +1,0 @@
----
-
-- name: Install tmux with homebrew
-  homebrew: name=tmux state=latest

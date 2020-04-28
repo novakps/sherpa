@@ -1,8 +1,0 @@
----
-
-- name: Install virtualbox with homebrew cask
-  homebrew_cask: name=virtualbox state=present
-
-
-- name: Install virtualbox extension-pack with homebrew cask
-  homebrew_cask: name=virtualbox-extension-pack state=present

@@ -1,7 +1,0 @@
----
-
-- name: Install chromium with apt
-  apt: name=chromium-browser
-  become: true
-
-  # TODO: Install google chrome too
