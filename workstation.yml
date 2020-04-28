@@ -89,6 +89,7 @@
        #- closure-linter
        - psycopg2
        - virtualenv
+     pip_package: python3
      pip_executable: pip3.7
 
    roles:
