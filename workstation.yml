@@ -4,7 +4,8 @@
    hosts: all
    vars:
      homebrew_installed_packages: []
-     homebrew_cask_apps: []
+     homebrew_cask_apps:
+       - amethyst
 
    roles:
      - role: geerlingguy.postgresql
@@ -66,7 +67,7 @@
 
      # osx
      # - amethyst
-     # - iterm2
+     - iterm2
      # - osx-customizations
      # - skitch
      # - sourcetree
