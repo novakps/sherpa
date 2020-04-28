@@ -3,13 +3,16 @@
  - name: Packages for workstations
    hosts: all
    vars:
-     homebrew_installed_packages: []
+     homebrew_installed_packages:
+       - ag
      homebrew_cask_apps:
        - amethyst
        - iterm2
        - skitch
        - sourcetree
        - the-unarchiver
+     apt_installed_packages:
+       - silversearcher-ag
 
    roles:
      - role: geerlingguy.postgresql

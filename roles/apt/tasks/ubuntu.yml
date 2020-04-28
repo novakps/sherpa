@@ -15,3 +15,10 @@
     state: present
     repo: "deb http://archive.canonical.com/ {{ ansible_distribution_release }} partner"
     update_cache: yes
+
+- name: Install configured apt packages.
+  apt:
+    name: "{{ item.name | default(item) }}"
+    state: present
+    loop: "{{ apt_installed_packages }}"
+    become: true
