@@ -43,8 +43,8 @@
        # - sublime-text
        - the-unarchiver
        # - vagrant
-       - virtualbox
-       - virtualbox-extension-pack
+       # - virtualbox
+       # - virtualbox-extension-pack
        - vlc
        - xquartz
      # Ubuntu
@@ -85,13 +85,15 @@
        # - prettier
        - tern@0.13.0
      # both
-     pip_installed_packages:
+     pip_install_packages:
        #- closure-linter
        - psycopg2
        - virtualenv
+     pip_executable: pip3.7
 
    roles:
-     - role: geerlingguy.postgresql
+     - geerlingguy.pip
+     # - geerlingguy.postgresql
      - git
      - intellij-idea
      - emacs
