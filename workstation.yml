@@ -99,5 +99,4 @@
      - nginx
      - sshd
      - zsh
-     - zsh-completions
      # - osx-customizations
