@@ -30,18 +30,12 @@ sudo chown -R `whoami`:admin /usr/local
 
 ```
 
-## Ubuntu 16.04:
+## Ubuntu 18.04:
 
 ### install ansible and git
 
 ```
-sudo apt-get install software-properties-common
-
-sudo apt-add-repository -y ppa:ansible/ansible
-
-sudo apt-get update
-
-sudo apt-get install -y ansible git
+sudo apt install -y ansible git
 
 ```
 ## Both
