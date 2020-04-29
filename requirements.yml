@@ -5,3 +5,6 @@
 - src: https://github.com/novakps/ansible-role-postgresql
   version: master
   name: geerlingguy.postgresql
+- name: geerlingguy.nodejs
+  src: https://github.com/novakps/ansible-role-postgresql
+  version: master

@@ -79,11 +79,14 @@
        - wget
        - yarn
      # both
-     npm_installed_packages:
+     nodejs_version: "12.x"
+     npm_config_unsafe_perm: "true"
+     nodejs_npm_global_packages:
        # - grunt-cli
        - n
        # - prettier
-       - tern@0.13.0
+       - name: tern
+         version: 0.13.0
      # both
      pip_install_packages:
        #- closure-linter
@@ -94,6 +97,7 @@
 
    roles:
      - geerlingguy.pip
+     - geerlingguy.nodejs
      # - geerlingguy.postgresql
      - git
      - intellij-idea
