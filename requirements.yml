@@ -1,10 +1,9 @@
 ---
 - name: geerlingguy.homebrew
-- name: geerlingguy.nodejs
 - name: geerlingguy.pip
 - src: https://github.com/novakps/ansible-role-postgresql
   version: master
   name: geerlingguy.postgresql
 - name: geerlingguy.nodejs
-  src: https://github.com/novakps/ansible-role-postgresql
+  src: https://github.com/novakps/ansible-role-nodejs
   version: master
