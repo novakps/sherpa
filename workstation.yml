@@ -80,6 +80,7 @@
        - yarn
      # both
      nodejs_version: "12.x"
+     npm_config_prefix: "/usr/local/bin/npm"
      npm_config_unsafe_perm: "true"
      nodejs_npm_global_packages:
        # - grunt-cli
