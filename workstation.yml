@@ -97,6 +97,7 @@
      pip_executable: pip3.7
 
    roles:
+     - geerlingguy.homebrew
      - geerlingguy.pip
      - geerlingguy.nodejs
      # - geerlingguy.postgresql
