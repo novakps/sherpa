@@ -79,15 +79,8 @@
        - wget
        - yarn
      # both
-     nodejs_version: "12.x"
-     npm_config_prefix: "/usr/local/bin/npm"
-     npm_config_unsafe_perm: "true"
-     nodejs_npm_global_packages:
-       # - grunt-cli
-       - n
-       # - prettier
-       - name: tern
-         version: 0.13.0
+
+
      # both
      pip_install_packages:
        #- closure-linter
@@ -96,10 +89,18 @@
      pip_package: python3
      pip_executable: pip3.7
 
+     tasks:
+       - name: Install npm packages
+         npm: name-{item}
+         with_items:
+           # - grunt-cli
+           - n
+           # - prettier
+           - name: tern
+             version: 0.13.0
    roles:
      - geerlingguy.homebrew
      - geerlingguy.pip
-     - geerlingguy.nodejs
      # - geerlingguy.postgresql
      - git
      - intellij-idea
