@@ -20,5 +20,5 @@
   apt:
     name: "{{ item.name | default(item) }}"
     state: present
-    loop: "{{ apt_installed_packages }}"
     become: true
+  loop: "{{ apt_installed_packages }}"
