@@ -47,7 +47,7 @@
        # - virtualbox
        # - virtualbox-extension-pack
        - vlc
-       become: true
+         become: true
        - xquartz
      # Ubuntu
      apt_installed_packages:
