@@ -93,8 +93,7 @@
            # - grunt-cli
            - n
            # - prettier
-           - name: tern
-             version: 0.13.0
+           - tern
       tasks:
         - name: Install pip packages
           pip:
