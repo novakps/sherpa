@@ -27,6 +27,7 @@
        # - alfred
        - amethyst
        # - atom
+       - eclipse-cpp
        # - evernote
        # - firefox
        # - gimp
@@ -46,6 +47,7 @@
        # - virtualbox
        # - virtualbox-extension-pack
        - vlc
+       become: true
        - xquartz
      # Ubuntu
      apt_installed_packages:
@@ -78,29 +80,36 @@
        - vlc
        - wget
        - yarn
-     # both
 
 
      # both
-     pip_install_packages:
-       #- closure-linter
-       # - psycopg2
-       - virtualenv
-     pip_package: python3
-     pip_executable: pip3.7
 
      tasks:
        - name: Install npm packages
-         npm: name-{item}
+         npm:
+           name: "{{ item.name | default(item) }}"
+           version: "{{ item.version | default(omit) }}"
+           state: "{{ item.state | default(omit) }}"
          with_items:
            # - grunt-cli
            - n
            # - prettier
            - name: tern
              version: 0.13.0
-   roles:
+      tasks:
+        - name: Install pip packages
+          pip:
+            name: "{{ item.name | default(item) }}"
+            version: "{{ item.version | default(omit) }}"
+            state: "{{ item.state | default(omit) }}"
+            executable: pip3.7
+          with_items:
+            #- closure-linter
+            # - psycopg2
+            - virtualenv
+
      - geerlingguy.homebrew
-     - geerlingguy.pip
+
      # - geerlingguy.postgresql
      - git
      - intellij-idea
