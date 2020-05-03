@@ -23,6 +23,7 @@
        - wget
        - yarn
        - zsh-completions
+
      homebrew_cask_apps:
        # - alfred
        - amethyst
@@ -48,6 +49,7 @@
        # - virtualbox-extension-pack
        # - vlc
        - xquartz
+
      # Ubuntu
      apt_installed_packages:
        - ack
@@ -80,34 +82,9 @@
        - wget
        - yarn
 
-
-     # both
-
-     tasks:
-       - name: Install npm packages
-         npm:
-           name: "{{ item.name | default(item) }}"
-           version: "{{ item.version | default(omit) }}"
-           state: "{{ item.state | default(omit) }}"
-         with_items:
-           # - grunt-cli
-           - n
-           # - prettier
-           - tern
-      tasks:
-        - name: Install pip packages
-          pip:
-            name: "{{ item.name | default(item) }}"
-            version: "{{ item.version | default(omit) }}"
-            state: "{{ item.state | default(omit) }}"
-            executable: pip3.7
-          with_items:
-            #- closure-linter
-            # - psycopg2
-            - virtualenv
-
+       # both
+   roles:
      - geerlingguy.homebrew
-
      # - geerlingguy.postgresql
      - git
      - intellij-idea
@@ -117,3 +94,28 @@
      - sshd
      - zsh
      # - osx-customizations
+
+
+   tasks:
+     - name: Install npm packages
+       npm:
+         name: "{{ item.name | default(item) }}"
+         version: "{{ item.version | default(omit) }}"
+         state: "{{ item.state | default(omit) }}"
+       with_items:
+        # - grunt-cli
+        - n
+        # - prettier
+        - tern
+
+     - name: Install pip packages
+       pip:
+         name: "{{ item.name | default(item) }}"
+         version: "{{ item.version | default(omit) }}"
+         state: "{{ item.state | default(omit) }}"
+         executable: pip3.7
+       with_items:
+         - ansible-lint
+         #- closure-linter
+         # - psycopg2
+         - virtualenv
