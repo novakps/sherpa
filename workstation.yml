@@ -46,7 +46,7 @@
        # - vagrant
        # - virtualbox
        # - virtualbox-extension-pack
-       - vlc
+       - name: vlc
          become: true
        - xquartz
      # Ubuntu
