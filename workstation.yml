@@ -87,7 +87,7 @@
      - geerlingguy.homebrew
      - role: geerlingguy.postgresql
        postgresql_hba_entries:
-         - { type: host: database: synaptic, user: all, address: '0.0.0.0/32', auth_method: md5 }
+         - { type: host, database: synaptic, user: all, address: '0.0.0.0/32', auth_method: md5 }
      - git
      - intellij-idea
      - emacs
