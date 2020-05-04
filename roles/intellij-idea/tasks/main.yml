@@ -1,6 +1,6 @@
 ---
 
-- import_taskss: ubuntu.yml
+- import_tasks: ubuntu.yml
   when: ansible_distribution == 'Ubuntu'
 
 - import_tasks: osx.yml
