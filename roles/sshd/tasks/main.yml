@@ -1,6 +1,6 @@
 ---
 
-- include: ubuntu.yml
+- inport_tasks: ubuntu.yml
   when: ansible_distribution == 'Ubuntu'
 
 # expect sshd already installed on macox

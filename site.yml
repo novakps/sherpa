@@ -7,4 +7,4 @@
 
  - name: Workstation
    hosts: all
- - include: workstation.yml
+ - import_playbook: workstation.yml
