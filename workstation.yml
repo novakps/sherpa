@@ -19,7 +19,7 @@
        - python3
        - surfraw
        - tmux
-       # - vim
+        - vim
        - wget
        - yarn
        - zsh-completions
@@ -27,10 +27,10 @@
      homebrew_cask_apps:
        # - alfred
        - amethyst
-       # - atom
+       - atom
        - eclipse-cpp
        # - evernote
-       # - firefox
+       # - firefox  ## assume installed already
        # - gimp
        # - gitkraken
        # - google-chat
@@ -42,9 +42,9 @@
        - skitch
        - skype
        - sourcetree
-       # - sublime-text
+       - sublime-text
        - the-unarchiver
-       # - vagrant
+       - vagrant
        # - virtualbox
        # - virtualbox-extension-pack
        # - vlc
@@ -72,11 +72,11 @@
        - rdesktop
        - silversearcher-ag
        - skype
-       # - sublime-text  ## needs ppa
+       - sublime-text  ## needs ppa
        - surfraw
        - tmux
-       # - vagrant
-       # - vim
+       - vagrant
+       - vim
        #- virtualbox ## ppa needed
        - vlc
        - wget
