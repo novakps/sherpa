@@ -93,7 +93,7 @@
      - nginx
      - sshd
      - zsh
-     # - osx-customizations
+     - osx-customizations
 
 
    tasks:
