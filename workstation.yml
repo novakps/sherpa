@@ -113,8 +113,8 @@
        pip:
          state: "{{ item.state | default(omit) }}"
          executable: pip3.7
-       name:
-         - ansible-lint
-         #- closure-linter
-         # - psycopg2
-         - virtualenv
+         name:
+           - ansible-lint
+           #- closure-linter
+           # - psycopg2
+           - virtualenv
