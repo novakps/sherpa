@@ -19,7 +19,7 @@
        - python3
        - surfraw
        - tmux
-        - vim
+       - vim
        - wget
        - yarn
        - zsh-completions
