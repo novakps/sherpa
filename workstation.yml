@@ -104,7 +104,8 @@
            password: user
            role_attr_flags: SUPERUSER
        postgresql_unix_socket_directories:
-         "/tmp"
+         - /tmp
+
      - git
      - intellij-idea
      - emacs
