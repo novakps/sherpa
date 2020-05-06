@@ -88,6 +88,16 @@
      - role: geerlingguy.postgresql
        postgresql_hba_entries:
          - { type: host, database: synaptic, user: all, address: '0.0.0.0/32', auth_method: md5 }
+         - { type: host, database: all, user: all, address: '0.0.0.0/0', auth_method: md5 }
+         - { type: host, database: all, user: all, address: 127.0.0.1/3s, auth_method: trust }
+         - { type: local, database: all, user: postgres, auth_method: trust }
+       postgresql_global_config_options:
+         - option: port
+           value: 3247
+         - option: bytea_output
+           value: escape
+         - option: max_connections
+           value: 100
        postgres_users_no_log: false
        postgresql_users:
          - name: postgres
@@ -122,6 +132,7 @@
          executable: pip3.7
          name:
            - ansible-lint
+           - boto3
            #- closure-linter
            # - psycopg2
            - virtualenv
