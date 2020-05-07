@@ -99,6 +99,7 @@
          - option: max_connections
            value: 100
        postgres_users_no_log: false
+       postgresql_user: "{{ ansible_user_id }}"
        postgresql_users:
          - name: postgres
            password: user
