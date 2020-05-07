@@ -137,5 +137,5 @@
            - ansible-lint
            - boto3
            #- closure-linter
-           # - psycopg2
+           - psycopg2
            - virtualenv
