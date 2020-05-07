@@ -103,6 +103,7 @@
        postgresql_users:
          - name: postgres
            password: user
+           port: 3247
            role_attr_flags: SUPERUSER
        postgresql_unix_socket_directories:
          - "/usr/local/var/run/postgresql@10"
